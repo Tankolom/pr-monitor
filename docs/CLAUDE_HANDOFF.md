@@ -28,6 +28,14 @@ PR Monitor — SaaS-платформа для медиамониторинга:
 /Users/leonid.ivanenkov/Documents/Codex/2026-05-29/https-www-mlg-ru-saas-pr
 ```
 
+## 3.1. GitHub-репозиторий
+
+Основной удалённый репозиторий:
+
+```text
+https://github.com/Tankolom/pr-monitor
+```
+
 ## 4. Серверы
 
 ### Актуальный онлайн-сервер
@@ -146,24 +154,23 @@ python3 -m unittest discover -s tests
 
 ## 12. GitHub
 
-На текущей машине git уже инициализирован, но GitHub ещё не авторизован.
+Git уже инициализирован, основная ветка — `main`, удалённый репозиторий уже привязан.
 
-Чтобы подключить удалённый репозиторий:
-
-1. Авторизовать GitHub CLI:
+Проверка:
 
 ```bash
-gh auth login
+git remote -v
+git branch --show-current
+git status
 ```
 
-2. Создать репозиторий или привязать существующий:
+Обычный рабочий цикл:
 
 ```bash
-git remote add origin <REPO_URL>
-git push -u origin main
+git add .
+git commit -m "Meaningful message"
+git push
 ```
-
-Если `gh` не используется, достаточно обычного `git remote add origin ...`.
 
 ## 13. Минимальный чек-лист перед релизом
 
