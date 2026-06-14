@@ -1,0 +1,1902 @@
+{
+  "content": {
+    "Объекты": "AVALAB, Fastboard, Avalin, Itrielt, Win Solutions",
+    "Категории СМИ": "Газеты, Журналы, Интернет, Информагентства, Радио, ТВ",
+    "Временной период": "с 01 ноября 2025 по 30 ноября 2025",
+    "Дата подготовки отчета": "02 декабря 2025",
+    "Всего сообщений": 27
+  },
+  "summary": [
+    {
+      "brand": "AVALAB",
+      "messages": 19,
+      "media_index": 50.6,
+      "negative": 0,
+      "neutral": 18,
+      "positive": 1,
+      "negative_share": 0.0,
+      "neutral_share": 0.9473684210526315,
+      "positive_share": 0.05263157894736842,
+      "main_role": 4,
+      "main_role_share": 0.21052631578947367,
+      "citations": 19,
+      "citation_share": 1.0,
+      "media_index_per_mention": 2.6631578947368424
+    },
+    {
+      "brand": "Fastboard",
+      "messages": 14,
+      "media_index": 43.5,
+      "negative": 0,
+      "neutral": 13,
+      "positive": 1,
+      "negative_share": 0.0,
+      "neutral_share": 0.9285714285714286,
+      "positive_share": 0.07142857142857142,
+      "main_role": 4,
+      "main_role_share": 0.2857142857142857,
+      "citations": 13,
+      "citation_share": 0.9285714285714286,
+      "media_index_per_mention": 3.107142857142857
+    },
+    {
+      "brand": "Avalin",
+      "messages": 11,
+      "media_index": 9.7,
+      "negative": 0,
+      "neutral": 0,
+      "positive": 11,
+      "negative_share": 0.0,
+      "neutral_share": 0.0,
+      "positive_share": 1.0,
+      "main_role": 9,
+      "main_role_share": 0.8181818181818182,
+      "citations": 3,
+      "citation_share": 0.2727272727272727,
+      "media_index_per_mention": 0.8818181818181817
+    },
+    {
+      "brand": "Itrielt",
+      "messages": 3,
+      "media_index": 5,
+      "negative": 0,
+      "neutral": 0,
+      "positive": 3,
+      "negative_share": 0.0,
+      "neutral_share": 0.0,
+      "positive_share": 1.0,
+      "main_role": 0,
+      "main_role_share": 0.0,
+      "citations": 0,
+      "citation_share": 0.0,
+      "media_index_per_mention": 1.6666666666666667
+    },
+    {
+      "brand": "Win Solutions",
+      "messages": 0,
+      "media_index": 0,
+      "negative": 0,
+      "neutral": 0,
+      "positive": 0,
+      "negative_share": 0,
+      "neutral_share": 0,
+      "positive_share": 0,
+      "main_role": 0,
+      "main_role_share": 0,
+      "citations": 0,
+      "citation_share": 0,
+      "media_index_per_mention": 0
+    }
+  ],
+  "daily_mentions": [
+    {
+      "date": "2025-11-01",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-02",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-03",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-04",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-05",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-06",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-07",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-08",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-09",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-10",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-11",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-12",
+      "AVALAB": 16,
+      "Fastboard": 14,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-13",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-14",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-15",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-16",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-17",
+      "AVALAB": 3,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-18",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-19",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-20",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-21",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-22",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-23",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-24",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-25",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-26",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-27",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-28",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-29",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-30",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "daily_media_index": [
+    {
+      "date": "2025-11-01",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-02",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-03",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-04",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-05",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-06",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-07",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-08",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-09",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-10",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-11",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-12",
+      "AVALAB": 45.6,
+      "Fastboard": 43.5,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-13",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-14",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-15",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-16",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-17",
+      "AVALAB": 5,
+      "Fastboard": 0,
+      "Avalin": 7,
+      "Itrielt": 5,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-18",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-19",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-20",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-21",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-22",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-23",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-24",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-25",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-26",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-27",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-28",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-29",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-30",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 2.7,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "daily_main_role": [
+    {
+      "date": "2025-11-01",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-02",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-03",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-04",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-05",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-06",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-07",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-08",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-09",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-10",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-11",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-12",
+      "AVALAB": 4,
+      "Fastboard": 4,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-13",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-14",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-15",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-16",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-17",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-18",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-19",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-20",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-21",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-22",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-23",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-24",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-25",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-26",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-27",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-28",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-29",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-30",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "daily_citation": [
+    {
+      "date": "2025-11-01",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-02",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-03",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-04",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-05",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-06",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-07",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-08",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-09",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-10",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-11",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-12",
+      "AVALAB": 16,
+      "Fastboard": 13,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-13",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-14",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-15",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-16",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-17",
+      "AVALAB": 3,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-18",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-19",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-20",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-21",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-22",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-23",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-24",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-25",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-26",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-27",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-28",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-29",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "date": "2025-11-30",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "top_events": [
+    {
+      "Событие": "Доля продаж квартир на Юге через цифровые сервисы выросла на 20%",
+      "Количество сообщений": 13,
+      "Охват (из открытых источников)": "1 378 560",
+      "Заметность события": 1.17,
+      "МедиаИндекс": 78
+    },
+    {
+      "Событие": "На Кубани на 20% выросли продажи жилья с использованием цифровых сервисов",
+      "Количество сообщений": 3,
+      "Охват (из открытых источников)": "9 108",
+      "Заметность события": 0.16,
+      "МедиаИндекс": 17
+    },
+    {
+      "Событие": "Грачья Алексанян: Вызовы в области импортозамещения - это не препятствие, а драйвер",
+      "Количество сообщений": 1,
+      "Охват (из открытых источников)": "1 370",
+      "Заметность события": 0.09,
+      "МедиаИндекс": 10
+    },
+    {
+      "Событие": "На Дону и Кубани каждый пятый договор купли-продажи жилья заключают онлайн",
+      "Количество сообщений": 2,
+      "Охват (из открытых источников)": "72 650",
+      "Заметность события": 0.06,
+      "МедиаИндекс": 1.1
+    },
+    {
+      "Событие": "Основатель \"АВА Групп\" Ваган Арутюнян превращает холдинг в глобального IT-игрока: путь AVALIN в Китай",
+      "Количество сообщений": 8,
+      "Охват (из открытых источников)": "88 706",
+      "Заметность события": 0.04,
+      "МедиаИндекс": 2.7
+    }
+  ],
+  "top_sources_count": [
+    {
+      "Наименование СМИ": "Seldon.News news.myseldon.com",
+      "AVALAB": 4,
+      "Fastboard": 3,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Деловая газета dg-yug.ru",
+      "AVALAB": 3,
+      "Fastboard": 2,
+      "Avalin": 1,
+      "Itrielt": 1,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "РБК + plus.rbc.ru",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 1,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "AVA avadom.ru",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 1,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "123ru.net",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Эксперт ЮГ expertsouth.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Утренний Юг utyug.info",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "РБК rostov.rbc.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "РБК kuban.rbc.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Коммерсантъ # Краснодар Кубань.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "БезФормата Усть-Донецкий ustdoneckiy.bezformat...",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Pro город Краснодар newskrasnodar.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Infox.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "ШколаЖизни.ру shkolazhizni.ru",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "RU24.pro",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Ru24.net",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "RSS+ rss.plus",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "News-Life news-life.pro",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "103news.com",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "DomostroyDon.ru",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "top_sources_index": [
+    {
+      "Наименование СМИ": "Деловая газета dg-yug.ru",
+      "AVALAB": 9,
+      "Fastboard": 7,
+      "Avalin": 3,
+      "Itrielt": 2,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "РБК kuban.rbc.ru",
+      "AVALAB": 10,
+      "Fastboard": 9,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Коммерсантъ # Краснодар Кубань.ru",
+      "AVALAB": 7,
+      "Fastboard": 7,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "РБК rostov.rbc.ru",
+      "AVALAB": 7,
+      "Fastboard": 7,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Утренний Юг utyug.info",
+      "AVALAB": 7,
+      "Fastboard": 7,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Эксперт ЮГ expertsouth.ru",
+      "AVALAB": 4,
+      "Fastboard": 4,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "РБК + plus.rbc.ru",
+      "AVALAB": 2,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 2,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "AVA avadom.ru",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 1,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Infox.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Pro город Краснодар newskrasnodar.ru",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "ШколаЖизни.ру shkolazhizni.ru",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 2,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "DomostroyDon.ru",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Seldon.News news.myseldon.com",
+      "AVALAB": 0.4,
+      "Fastboard": 0.3,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "123ru.net",
+      "AVALAB": 0.1,
+      "Fastboard": 0.1,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "БезФормата Усть-Донецкий ustdoneckiy.bezformata.com",
+      "AVALAB": 0.1,
+      "Fastboard": 0.1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "103news.com",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "News-Life news-life.pro",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "RSS+ rss.plus",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "Ru24.net",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Наименование СМИ": "RU24.pro",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 0.1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "regions_raw": [
+    [
+      "Регион",
+      "AVALAB",
+      null,
+      "Fastboard",
+      null,
+      "Avalin",
+      null,
+      "Itrielt",
+      null,
+      "Win Solutions",
+      null
+    ],
+    [
+      "",
+      "Количество",
+      "МедиаИндекс",
+      "Количество",
+      "МедиаИндекс",
+      "Количество",
+      "МедиаИндекс",
+      "Количество",
+      "МедиаИндекс",
+      "Количество",
+      "МедиаИндекс"
+    ],
+    [
+      "Москва",
+      7,
+      3.5,
+      5,
+      1.4,
+      8,
+      3.7,
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      "Краснодарский край",
+      8,
+      35,
+      6,
+      31,
+      2,
+      4,
+      2,
+      3,
+      0,
+      0
+    ],
+    [
+      "Ростовская область",
+      4,
+      12.1,
+      3,
+      11.1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "Санкт-Петербург",
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "words": [
+    {
+      "Слово": "цифровой",
+      "AVALAB": 15,
+      "Fastboard": 10,
+      "Avalin": 11,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "грачья",
+      "AVALAB": 15,
+      "Fastboard": 12,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "bi-платформы",
+      "AVALAB": 14,
+      "Fastboard": 14,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "алексанян",
+      "AVALAB": 15,
+      "Fastboard": 13,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "продажа",
+      "AVALAB": 13,
+      "Fastboard": 13,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "it-подразделение",
+      "AVALAB": 10,
+      "Fastboard": 7,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "3d-визуализации",
+      "AVALAB": 11,
+      "Fastboard": 11,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "застройщик",
+      "AVALAB": 12,
+      "Fastboard": 10,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "холдинг",
+      "AVALAB": 4,
+      "Fastboard": 1,
+      "Avalin": 11,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "недвижимость",
+      "AVALAB": 4,
+      "Fastboard": 1,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "девелопер",
+      "AVALAB": 4,
+      "Fastboard": 1,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "сделка",
+      "AVALAB": 5,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "строительный",
+      "AVALAB": 3,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "онлайн-показы",
+      "AVALAB": 3,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "ит-подразделение",
+      "AVALAB": 3,
+      "Fastboard": 0,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "сямэнь",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "направление",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "команда",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "девелоперский",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "визуализация",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "ава",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "гендиректор",
+      "AVALAB": 4,
+      "Fastboard": 4,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "it-подразделения",
+      "AVALAB": 4,
+      "Fastboard": 4,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "покупатель",
+      "AVALAB": 5,
+      "Fastboard": 3,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "сервис",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 7,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "девелопмент",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 7,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "показ",
+      "AVALAB": 3,
+      "Fastboard": 3,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "агентский",
+      "AVALAB": 3,
+      "Fastboard": 3,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "краснодар",
+      "AVALAB": 2,
+      "Fastboard": 2,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Слово": "квартира",
+      "AVALAB": 2,
+      "Fastboard": 2,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "authors": [
+    {
+      "Автор": "Фомченков Тарас",
+      "AVALAB": 2,
+      "Fastboard": 2,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 33
+    },
+    {
+      "Автор": "Скрипник Ирина",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 1,
+      "Win Solutions": 0,
+      "МедиаИндекс": 7
+    },
+    {
+      "Автор": "Аверкина Виктория",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 14
+    },
+    {
+      "Автор": "Коробская Дарья",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 4
+    },
+    {
+      "Автор": "Стрелкова Оксана",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 10
+    },
+    {
+      "Автор": "Зорина Алина",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 14
+    },
+    {
+      "Автор": "Крылова Елена",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 2
+    },
+    {
+      "Автор": "Виленская Имира",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0,
+      "МедиаИндекс": 2
+    }
+  ],
+  "industries": [
+    {
+      "Категории СМИ": "Новостные агрегаторы",
+      "AVALAB": 6,
+      "Fastboard": 5,
+      "Avalin": 7,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Категории СМИ": "Бизнес и общество",
+      "AVALAB": 11,
+      "Fastboard": 9,
+      "Avalin": 2,
+      "Itrielt": 2,
+      "Win Solutions": 0
+    },
+    {
+      "Категории СМИ": "Недвижимость",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Категории СМИ": "Life style",
+      "AVALAB": 0,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Категории СМИ": "Корпоративные",
+      "AVALAB": 1,
+      "Fastboard": 0,
+      "Avalin": 1,
+      "Itrielt": 1,
+      "Win Solutions": 0
+    }
+  ],
+  "rubrics": [
+    {
+      "Рубрика": "Высокие технологии",
+      "AVALAB": 13,
+      "Fastboard": 8,
+      "Avalin": 11,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Рубрика": "Строительство и недвижимость",
+      "AVALAB": 7,
+      "Fastboard": 7,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    },
+    {
+      "Рубрика": "Прочее",
+      "AVALAB": 4,
+      "Fastboard": 4,
+      "Avalin": 0,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ],
+  "genres": [
+    {
+      "Категории СМИ": "Новости",
+      "AVALAB": 18,
+      "Fastboard": 13,
+      "Avalin": 3,
+      "Itrielt": 3,
+      "Win Solutions": 0
+    },
+    {
+      "Категории СМИ": "Аналитика",
+      "AVALAB": 1,
+      "Fastboard": 1,
+      "Avalin": 8,
+      "Itrielt": 0,
+      "Win Solutions": 0
+    }
+  ]
+}

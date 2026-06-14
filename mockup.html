@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>PR Monitor — макет</title>
+<style>
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,sans-serif;background:#f0f4f6;color:#18222f;display:flex;min-height:100vh}
+
+/* ── Sidebar ── */
+.sidebar{width:220px;flex-shrink:0;background:#102f3a;display:flex;flex-direction:column;padding:20px 0;position:fixed;top:0;left:0;bottom:0;z-index:10}
+.sidebar-brand{padding:0 20px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+.sidebar-brand .mark{width:36px;height:36px;background:#26bfd0;border-radius:8px;display:grid;place-items:center;color:#102f3a;font-weight:900;font-size:14px;margin-bottom:10px}
+.sidebar-brand b{display:block;color:#fff;font-size:15px}
+.sidebar-brand small{color:#7fa8b4;font-size:12px}
+.sidebar-nav{padding:14px 10px;flex:1;display:flex;flex-direction:column;gap:2px}
+.sidebar-nav a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:#9dc4ce;font-size:14px;font-weight:600;text-decoration:none;transition:.15s}
+.sidebar-nav a:hover{background:rgba(255,255,255,.07);color:#fff}
+.sidebar-nav a.active{background:rgba(38,191,208,.15);color:#26bfd0}
+.sidebar-nav .ico{width:20px;text-align:center;font-size:15px}
+.sidebar-section{padding:6px 20px 4px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#4e7a87;margin-top:8px}
+.sidebar-bottom{padding:14px 10px;border-top:1px solid rgba(255,255,255,.08)}
+.sidebar-user{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px}
+.sidebar-user .av{width:30px;height:30px;border-radius:50%;background:#1f5261;display:grid;place-items:center;color:#7fc8d4;font-size:13px;font-weight:800;flex-shrink:0}
+.sidebar-user b{display:block;color:#d0e8ec;font-size:13px}
+.sidebar-user small{color:#4e7a87;font-size:11px}
+
+/* ── Main ── */
+.main{margin-left:220px;flex:1;display:flex;flex-direction:column;min-width:0}
+.topbar{background:#fff;border-bottom:1px solid #e2eaed;padding:14px 28px;display:flex;align-items:center;gap:16px}
+.topbar .project-select{display:flex;align-items:center;gap:10px}
+.topbar .project-label{font-size:13px;color:#6a7c85;font-weight:600}
+.topbar select{border:1px solid #d0dde3;border-radius:8px;padding:7px 10px;font-size:14px;font-weight:700;color:#102f3a;background:#f7fbfc;cursor:pointer}
+.topbar .spacer{flex:1}
+.topbar .run-btn{background:#26bfd0;color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:800;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.topbar .run-btn .dot{width:7px;height:7px;border-radius:50%;background:#fff;opacity:.7}
+.topbar .date-range{font-size:13px;color:#6a7c85;border:1px solid #d0dde3;border-radius:8px;padding:7px 10px;background:#f7fbfc}
+
+.content{padding:24px 28px;flex:1}
+
+/* ── Hero row ── */
+.hero{display:grid;grid-template-columns:1fr 380px;gap:16px;margin-bottom:20px}
+.hero-card{background:#fff;border:1px solid #dce8ec;border-radius:10px;padding:22px 24px}
+.eyebrow{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#26bfd0;font-weight:800;margin-bottom:8px}
+.hero-card h1{font-size:24px;color:#102f3a;line-height:1.2;margin-bottom:8px}
+.hero-card p{color:#647783;font-size:14px;line-height:1.5}
+.hero-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn-primary{background:#102f3a;color:#fff;border:0;border-radius:8px;padding:9px 14px;font-weight:800;font-size:13px;cursor:pointer}
+.btn-secondary{background:#f0f7f9;color:#102f3a;border:1px solid #cce0e6;border-radius:8px;padding:9px 14px;font-weight:700;font-size:13px;cursor:pointer}
+.btn-accent{background:#26bfd0;color:#fff;border:0;border-radius:8px;padding:9px 14px;font-weight:800;font-size:13px;cursor:pointer}
+
+.status-panel{background:#fff;border:1px solid #dce8ec;border-radius:10px;padding:18px}
+.status-panel h3{font-size:14px;color:#102f3a;font-weight:800;margin-bottom:14px}
+.signal-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.signal{background:#f5fafc;border:1px solid #dce8ec;border-radius:8px;padding:12px}
+.signal b{display:block;font-size:22px;font-weight:900;color:#102f3a;line-height:1}
+.signal span{display:block;font-size:12px;color:#6a7c85;margin-top:4px}
+.signal.accent{background:#102f3a}
+.signal.accent b,.signal.accent span{color:#fff}
+.signal.good b{color:#1a9e68}
+.risk-badge{display:inline-flex;align-items:center;gap:6px;background:#fff8e6;border:1px solid #f0d88a;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;color:#8a6200}
+.risk-badge .dot{width:8px;height:8px;border-radius:50%;background:#f5b800}
+
+/* ── Metrics grid ── */
+.metrics-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+.metric{background:#fff;border:1px solid #dce8ec;border-radius:10px;padding:16px 18px;position:relative;overflow:hidden}
+.metric:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px}
+.metric.m1:after{background:#26bfd0}
+.metric.m2:after{background:#2fa76d}
+.metric.m3:after{background:#d95d59}
+.metric.m4:after{background:#7e8b95}
+.metric.m5:after{background:#f5b800}
+.metric .k{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6a7c85;font-weight:700}
+.metric .v{font-size:30px;font-weight:900;color:#102f3a;margin:6px 0 3px;line-height:1}
+.metric .cap{font-size:12px;color:#8a9ba3}
+.metric .delta{font-size:11px;font-weight:800;margin-top:4px}
+.delta.up{color:#1a9e68}
+.delta.neu{color:#8a9ba3}
+
+/* ── Main layout ── */
+.dashboard-body{display:grid;grid-template-columns:1fr 340px;gap:16px}
+.col-main{display:flex;flex-direction:column;gap:16px}
+.col-side{display:flex;flex-direction:column;gap:16px}
+
+.card{background:#fff;border:1px solid #dce8ec;border-radius:10px;overflow:hidden}
+.card-head{padding:16px 18px;border-bottom:1px solid #ecf2f4;display:flex;align-items:center;justify-content:space-between}
+.card-head h3{font-size:15px;font-weight:800;color:#102f3a}
+.card-head .tools{display:flex;gap:8px}
+.card-head select,.card-head .link{font-size:12px;color:#26bfd0;border:0;background:none;cursor:pointer;font-weight:700;text-decoration:none}
+.card-body{padding:18px}
+
+/* Chart placeholder */
+.chart-area{height:180px;background:linear-gradient(180deg,#f5fbfc,#fff);border-radius:8px;position:relative;display:flex;align-items:flex-end;padding:12px 8px 24px;gap:0;overflow:hidden}
+.chart-area svg{position:absolute;inset:0;width:100%;height:100%}
+.chart-labels{display:flex;justify-content:space-between;position:absolute;bottom:6px;left:16px;right:16px;font-size:11px;color:#8a9ba3;font-weight:600}
+
+/* Tone bar */
+.tone-bar{height:10px;border-radius:999px;overflow:hidden;display:flex;margin:12px 0}
+.tp{background:#2fa76d;flex:49}
+.tn{background:#7e8b95;flex:51}
+.tneg{background:#d95d59;flex:0}
+.tone-legend{display:flex;gap:14px}
+.tone-leg-item{display:flex;align-items:center;gap:5px;font-size:12px;color:#6a7c85;font-weight:600}
+.tone-dot{width:8px;height:8px;border-radius:50%}
+
+/* Source list */
+.source-list{display:grid;gap:0}
+.source-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #ecf2f4}
+.source-row:last-child{border:0}
+.source-name{flex:1;font-size:13px;color:#102f3a;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.source-bar-wrap{width:100px;background:#edf2f4;border-radius:999px;height:6px;flex-shrink:0}
+.source-bar{height:6px;border-radius:999px;background:#26bfd0}
+.source-n{font-size:12px;font-weight:800;color:#102f3a;width:28px;text-align:right;flex-shrink:0}
+
+/* Feed */
+.feed-item{padding:13px 0;border-bottom:1px solid #ecf2f4}
+.feed-item:last-child{border:0}
+.feed-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px}
+.feed-title{flex:1;font-size:14px;font-weight:700;color:#102f3a;line-height:1.3}
+.pill{display:inline-block;border-radius:999px;padding:2px 8px;font-size:11px;font-weight:800}
+.pos{background:#dff5e8;color:#116038}
+.neu{background:#edf1f4;color:#52606a}
+.feed-meta{font-size:12px;color:#8a9ba3}
+.feed-snippet{font-size:13px;color:#4a5e68;line-height:1.4;margin-top:4px}
+
+/* Recommendations */
+.rec-list{list-style:none;display:grid;gap:10px}
+.rec-list li{display:flex;gap:10px;font-size:13px;color:#4a5e68;line-height:1.45}
+.rec-num{width:22px;height:22px;border-radius:50%;background:#edf2f4;color:#26bfd0;font-size:11px;font-weight:900;display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+
+/* Theme tags */
+.theme-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.theme-tag{background:#edf7f9;border:1px solid #c8e8ed;border-radius:999px;padding:4px 10px;font-size:12px;color:#1f7d92;font-weight:700}
+.theme-tag span{color:#8a9ba3;font-size:11px;margin-left:3px}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="mark">PR</div>
+    <b>PR Monitor</b>
+    <small>Мониторинг СМИ</small>
+  </div>
+  <nav class="sidebar-nav">
+    <span class="sidebar-section">Аналитика</span>
+    <a href="#" class="active"><span class="ico">◎</span> <span>Дашборд</span></a>
+    <a href="#"><span class="ico">✦</span> <span>ИИ-анализ</span></a>
+    <a href="#"><span class="ico">≡</span> <span>Лента упоминаний</span></a>
+    <span class="sidebar-section">Настройка</span>
+    <a href="#"><span class="ico">⊕</span> <span>Проекты</span></a>
+    <a href="#"><span class="ico">⚙</span> <span>Источники</span></a>
+    <span class="sidebar-section">Система</span>
+    <a href="#"><span class="ico">↓</span> <span>Экспорт</span></a>
+    <a href="#"><span class="ico">☆</span> <span>Админ-панель</span></a>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="sidebar-user">
+      <div class="av">A</div>
+      <div>
+        <b>admin</b>
+        <small>Администратор</small>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- Main -->
+<div class="main">
+  <div class="topbar">
+    <div class="project-select">
+      <span class="project-label">Проект</span>
+      <select>
+        <option>Российско-китайские молодёжные игры</option>
+        <option>Георгий Филимонов</option>
+        <option>Все проекты</option>
+      </select>
+    </div>
+    <span class="date-range">08.03.2026 — 05.06.2026</span>
+    <div class="spacer"></div>
+    <button class="run-btn"><span class="dot"></span> Запустить срез</button>
+  </div>
+
+  <div class="content">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Командный центр проекта</div>
+        <h1>Российско-китайские молодёжные игры</h1>
+        <p>Последний срез: 02.06.2026 · найдено 27, новых 27 · Яндекс · Google/Serper · GDELT · RSS</p>
+        <div class="hero-actions">
+          <button class="btn-accent">Разобрать с ИИ</button>
+          <button class="btn-secondary">Открыть ленту</button>
+          <button class="btn-secondary">Скачать Excel</button>
+          <button class="btn-secondary">+ Новый проект</button>
+        </div>
+      </div>
+      <div class="status-panel">
+        <h3>Ключевые сигналы</h3>
+        <div class="signal-row">
+          <div class="signal accent">
+            <b>90</b>
+            <span>упоминаний</span>
+          </div>
+          <div class="signal">
+            <b>71</b>
+            <span>площадок</span>
+          </div>
+          <div class="signal good">
+            <b>49%</b>
+            <span>позитив</span>
+          </div>
+          <div class="signal">
+            <b>0%</b>
+            <span>негатив</span>
+          </div>
+        </div>
+        <div class="risk-badge"><span class="dot"></span> Риск: Средний — резкий рост</div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics-grid">
+      <div class="metric m1">
+        <div class="k">Упоминания</div>
+        <div class="v">90</div>
+        <div class="cap">в выборке</div>
+        <div class="delta up">↑ Новый всплеск</div>
+      </div>
+      <div class="metric m2">
+        <div class="k">Позитив</div>
+        <div class="v">49%</div>
+        <div class="cap">44 публикации</div>
+        <div class="delta neu">= без изм.</div>
+      </div>
+      <div class="metric m3">
+        <div class="k">Негатив</div>
+        <div class="v">0%</div>
+        <div class="cap">0 публикаций</div>
+        <div class="delta neu">= без изм.</div>
+      </div>
+      <div class="metric m4">
+        <div class="k">Источники</div>
+        <div class="v">71</div>
+        <div class="cap">уник. площадки</div>
+        <div class="delta up">↑ +71</div>
+      </div>
+      <div class="metric m5">
+        <div class="k">Активных дней</div>
+        <div class="v">14</div>
+        <div class="cap">из 90 дней</div>
+        <div class="delta neu">= базовая линия</div>
+      </div>
+    </div>
+
+    <!-- Dashboard body -->
+    <div class="dashboard-body">
+      <div class="col-main">
+
+        <!-- Chart -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Динамика упоминаний</h3>
+            <div class="tools">
+              <select><option>по месяцам</option><option>по неделям</option><option>по дням</option></select>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <svg viewBox="0 0 700 160" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#26bfd0" stop-opacity=".18"/>
+                    <stop offset="100%" stop-color="#26bfd0" stop-opacity=".02"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 155 L100 152 L200 148 L350 120 L450 60 L550 72 L700 80 L700 160 L0 160Z" fill="url(#g)"/>
+                <path d="M0 155 L100 152 L200 148 L350 120 L450 60 L550 72 L700 80" fill="none" stroke="#26bfd0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="450" cy="60" r="4" fill="#fff" stroke="#26bfd0" stroke-width="2.5"/>
+              </svg>
+              <div class="chart-labels">
+                <span>март</span><span>апр</span><span>май</span><span>июнь</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:#8a9ba3;font-weight:600">
+              <span>мин: 0</span><span>сумма: 90</span><span>макс: 48</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feed -->
+        <div class="card">
+          <div class="card-head">
+            <h3>Последние упоминания</h3>
+            <a href="#" class="link">Вся лента →</a>
+          </div>
+          <div class="card-body">
+            <div class="feed-item">
+              <div class="feed-top">
+                <div class="feed-title">Российско-китайские молодёжные игры открылись в Калининграде</div>
+                <span class="pill pos">позитив</span>
+              </div>
+              <div class="feed-meta">ria.ru · 02.06.2026</div>
+              <div class="feed-snippet">Торжественная церемония открытия собрала более 2000 спортсменов из обеих стран...</div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-top">
+                <div class="feed-title">Сборная России лидирует в медальном зачёте</div>
+                <span class="pill pos">позитив</span>
+              </div>
+              <div class="feed-meta">tass.ru · 02.06.2026</div>
+              <div class="feed-snippet">По итогам первого дня соревнований российские атлеты завоевали 14 золотых медалей...</div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-top">
+                <div class="feed-title">Итоги первого дня молодёжных игр России и Китая</div>
+                <span class="pill neu">нейтрально</span>
+              </div>
+              <div class="feed-meta">rbc.ru · 01.06.2026</div>
+              <div class="feed-snippet">Программа соревнований включает 18 видов спорта, участвуют спортсмены 16–23 лет...</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-side">
+
+        <!-- Tone -->
+        <div class="card">
+          <div class="card-head"><h3>Тональность</h3></div>
+          <div class="card-body">
+            <div class="tone-bar">
+              <div class="tp"></div>
+              <div class="tn"></div>
+              <div class="tneg"></div>
+            </div>
+            <div class="tone-legend">
+              <div class="tone-leg-item"><div class="tone-dot" style="background:#2fa76d"></div> Позитив 49%</div>
+              <div class="tone-leg-item"><div class="tone-dot" style="background:#7e8b95"></div> Нейтрал 51%</div>
+              <div class="tone-leg-item"><div class="tone-dot" style="background:#d95d59"></div> Негатив 0%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sources -->
+        <div class="card">
+          <div class="card-head"><h3>Топ источников</h3></div>
+          <div class="card-body">
+            <div class="source-list">
+              <div class="source-row"><span class="source-name">ria.ru</span><div class="source-bar-wrap"><div class="source-bar" style="width:100%"></div></div><span class="source-n">18</span></div>
+              <div class="source-row"><span class="source-name">tass.ru</span><div class="source-bar-wrap"><div class="source-bar" style="width:72%"></div></div><span class="source-n">13</span></div>
+              <div class="source-row"><span class="source-name">rbc.ru</span><div class="source-bar-wrap"><div class="source-bar" style="width:50%"></div></div><span class="source-n">9</span></div>
+              <div class="source-row"><span class="source-name">klops.ru</span><div class="source-bar-wrap"><div class="source-bar" style="width:39%"></div></div><span class="source-n">7</span></div>
+              <div class="source-row"><span class="source-name">kommersant.ru</span><div class="source-bar-wrap"><div class="source-bar" style="width:28%"></div></div><span class="source-n">5</span></div>
+              <div class="source-row"><span class="source-name">interfax.ru</span><div class="source-bar-wrap"><div class="source-bar" style="width:22%"></div></div><span class="source-n">4</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="card">
+          <div class="card-head"><h3>Следующие действия</h3></div>
+          <div class="card-body">
+            <ul class="rec-list">
+              <li><div class="rec-num">1</div> Разобрать причины всплеска: какие источники первыми дали публикации.</li>
+              <li><div class="rec-num">2</div> Использовать тему "российско-китайских" для уточнения запросов.</li>
+              <li><div class="rec-num">3</div> Зафиксировать этот запуск как стартовую ретро-точку проекта.</li>
+            </ul>
+            <div class="theme-tags">
+              <div class="theme-tag">российско-китайских <span>19</span></div>
+              <div class="theme-tag">молодёжных <span>14</span></div>
+              <div class="theme-tag">играх <span>12</span></div>
+              <div class="theme-tag">летних <span>11</span></div>
+              <div class="theme-tag">золото <span>6</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

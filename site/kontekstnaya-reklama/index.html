@@ -1,0 +1,2883 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контекстная реклама в Яндекс Директ: настройка и ведение под заявки | Килька Маркетинг</title>
+    <meta name="description" content="Настройка и ведение Яндекс Директа под заявки и продажи: аудит, семантика, объявления, аналитика и еженедельная оптимизация ставок. Запуск от 7 дней.">
+    <link rel="canonical" href="https://kilkamarketing.ru/kontekstnaya-reklama/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <meta name="theme-color" content="#0c6b73">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Килька Маркетинг">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:url" content="https://kilkamarketing.ru/kontekstnaya-reklama/">
+    <meta property="og:title" content="Контекстная реклама, которая окупается — Килька Маркетинг">
+    <meta property="og:description" content="Настройка и ведение Яндекс Директа под заявки и продажи: аудит, семантика, объявления, аналитика и еженедельная оптимизация ставок. Запуск от 7 дней.">
+    <meta property="og:image" content="https://kilkamarketing.ru/images/web/og-kontekstnaya-reklama.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="/metrika.js" defer></script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kilkamarketing.ru/#org", "name": "Килька Маркетинг", "url": "https://kilkamarketing.ru/", "logo": "https://kilkamarketing.ru/_next/static/media/logo.e751ec25.svg", "telephone": "+79521152800", "email": "sales@kilkamarketing.ru", "sameAs": ["https://t.me/kilka_marketing"]}, {"@type": "Service", "name": "Контекстная реклама", "serviceType": "Настройка и ведение Яндекс Директ", "url": "https://kilkamarketing.ru/kontekstnaya-reklama/", "provider": {"@id": "https://kilkamarketing.ru/#org"}, "areaServed": "RU", "description": "Настройка и ведение Яндекс Директа под заявки и продажи: аудит, семантика, объявления, аналитика и еженедельная оптимизация ставок. Запуск от 7 дней."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://kilkamarketing.ru/"}, {"@type": "ListItem", "position": 2, "name": "Контекстная реклама", "item": "https://kilkamarketing.ru/kontekstnaya-reklama/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Какой бюджет нужен для старта?", "acceptedAnswer": {"@type": "Answer", "text": "Зависит от ниши и города: в большинстве услуговых ниш тест начинается от 30-50 тысяч рублей рекламного бюджета в месяц. На аудите посчитаем вашу нишу и скажем цифру до запуска."}}, {"@type": "Question", "name": "Когда появятся первые заявки?", "acceptedAnswer": {"@type": "Answer", "text": "Обычно в первые 3-7 дней после запуска кампаний. Стабильная цена заявки выстраивается за 3-4 недели оптимизации."}}, {"@type": "Question", "name": "Чем вы отличаетесь от фрилансера?", "acceptedAnswer": {"@type": "Answer", "text": "Системой: фиксированный план запуска, еженедельные отчёты по деньгам, аналитика до заявки и прозрачные доступы. И мы агентство полного цикла - если заявки теряются на сайте или в отделе продаж, мы это увидим и скажем."}}, {"@type": "Question", "name": "Доступы к рекламному кабинету останутся у меня?", "acceptedAnswer": {"@type": "Answer", "text": "Да, всегда. Кабинет, Метрика и все наработки - ваша собственность. Мы работаем в ваших аккаунтах, а не «у себя»."}}, {"@type": "Question", "name": "Вы гарантируете количество заявок?", "acceptedAnswer": {"@type": "Answer", "text": "Гарантировать точное число заявок в аукционной системе нельзя - и тот, кто гарантирует, лукавит. Мы гарантируем прозрачность: план, еженедельные цифры и быстрые решения, если что-то идёт не так."}}]}]}</script>
+    <style>
+:root {
+  --ink: #082d35;
+  --text: #294b54;
+  --muted: #6b8086;
+  --teal: #0c6b73;
+  --teal-dark: #064a52;
+  --mint: #36bdae;
+  --orange: #ff5f1f;
+  --orange-dark: #dc4812;
+  --line: rgba(8, 45, 53, .12);
+  --bg: #f3fbfd;
+  --white: #ffffff;
+  --soft: #e7f6f8;
+  --shadow: 0 20px 48px rgba(8, 45, 53, .12);
+  --radius: 8px;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(120deg, rgba(54, 189, 174, .14), transparent 30%),
+    linear-gradient(300deg, rgba(255, 95, 31, .08), transparent 28%),
+    linear-gradient(180deg, #effafe 0, #ffffff 52%, #f3fbfd 100%);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--ink);
+}
+
+html {
+  background:
+    linear-gradient(180deg, #effafe 0, #ffffff 52%, #f3fbfd 100%);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.count-up {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 190px 1fr auto auto;
+  gap: 24px;
+  align-items: center;
+  width: min(1210px, calc(100% - 32px));
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, .68);
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: rgba(247, 253, 255, .94);
+  box-shadow: 0 12px 34px rgba(8, 45, 53, .08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  width: 184px;
+  height: 46px;
+}
+
+.brand img {
+  width: 184px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.nav a {
+  padding: 10px 0;
+}
+
+.header-contact {
+  display: grid;
+  gap: 2px;
+  text-align: right;
+}
+
+.phone {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.messenger {
+  color: #2c8a52;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.messenger::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #20c765;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  border: 1px solid var(--orange);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #ff7434, var(--orange-dark));
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 16px 30px rgba(255, 95, 31, .23);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 34px rgba(255, 95, 31, .3);
+}
+
+.button--small {
+  min-height: 42px;
+  padding-inline: 18px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.button--ghost {
+  border-color: rgba(12, 107, 115, .52);
+  background: rgba(255, 255, 255, .78);
+  color: var(--teal-dark);
+  box-shadow: none;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 74px 0 34px;
+}
+
+.kilka-flyer {
+  position: absolute;
+  top: 38%;
+  left: -230px;
+  z-index: 5;
+  width: clamp(138px, 14vw, 190px);
+  pointer-events: none;
+  opacity: 0;
+  transform-origin: 54% 62%;
+  filter: drop-shadow(0 16px 20px rgba(8, 45, 53, .2));
+  animation: fishFlight 15s cubic-bezier(.2, .74, .22, 1) 1.4s infinite both;
+}
+
+.kilka-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: fishSway 1.4s ease-in-out 1.4s infinite alternate;
+}
+
+.fish-wink {
+  position: absolute;
+  top: 21%;
+  right: 7%;
+  width: 7%;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(8, 45, 53, .92);
+  opacity: 0;
+  transform: rotate(-12deg) scaleX(.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .34);
+  animation: fishWink 15s linear 1.4s infinite both;
+}
+
+@keyframes fishFlight {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 76px, 0) rotate(-18deg) scale(.78);
+  }
+
+  3% {
+    opacity: 1;
+  }
+
+  8% {
+    transform: translate3d(18vw, -24px, 0) rotate(18deg) scale(.92);
+  }
+
+  18% {
+    transform: translate3d(48vw, -132px, 0) rotate(4deg) scale(1);
+  }
+
+  28% {
+    opacity: 1;
+    transform: translate3d(76vw, -40px, 0) rotate(20deg) scale(.94);
+  }
+
+  37%, 100% {
+    opacity: 0;
+    transform: translate3d(calc(100vw + 230px), 142px, 0) rotate(34deg) scale(.76);
+  }
+}
+
+@keyframes fishSway {
+  0% {
+    transform: rotate(-2deg) translateY(0);
+  }
+
+  100% {
+    transform: rotate(3deg) translateY(-3px);
+  }
+}
+
+@keyframes fishWink {
+  0%, 13%, 17%, 100% {
+    opacity: 0;
+    transform: rotate(-12deg) scaleX(.4);
+  }
+
+  14.5%, 15.5% {
+    opacity: .95;
+    transform: rotate(-12deg) scaleX(1);
+  }
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(480px, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 8;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 62px;
+  line-height: 1.03;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.lead {
+  max-width: 545px;
+  margin-bottom: 30px;
+  color: var(--text);
+  font-size: 19px;
+  line-height: 1.56;
+  font-weight: 680;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.hero-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 620px;
+}
+
+.hero-proof span {
+  min-height: 74px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .78);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 850;
+  box-shadow: 0 12px 28px rgba(8, 45, 53, .06);
+}
+
+.hero-proof span::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 4px;
+  margin-bottom: 11px;
+  border-radius: 999px;
+  background: var(--mint);
+}
+
+.hero__media {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+}
+
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(243, 251, 253, .54), transparent 34%),
+    linear-gradient(180deg, transparent 58%, rgba(5, 61, 68, .52));
+  pointer-events: none;
+}
+
+.hero__media img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: 58% center;
+}
+
+.hero-float {
+  position: absolute;
+  z-index: 2;
+  width: 238px;
+  padding: 15px 17px;
+  border: 1px solid rgba(255, 255, 255, .62);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 18px 34px rgba(8, 45, 53, .16);
+  backdrop-filter: blur(12px);
+  animation: heroFloat 6.4s ease-in-out infinite;
+}
+
+.hero-float--schedule {
+  top: 28px;
+  left: 24px;
+}
+
+.hero-float--funnel {
+  top: 190px;
+  left: 24px;
+  width: 250px;
+  animation-delay: -2s;
+}
+
+.hero-float--branches {
+  right: 24px;
+  bottom: 26px;
+  width: 252px;
+  animation-delay: -4s;
+}
+
+.hero-float__title {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 36px repeat(4, 1fr);
+  gap: 6px;
+  align-items: center;
+}
+
+.schedule-grid span {
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.schedule-grid i {
+  display: block;
+  height: 15px;
+  border-radius: 4px;
+  background: rgba(12, 107, 115, .12);
+}
+
+.schedule-grid i.busy {
+  background: rgba(54, 189, 174, .72);
+}
+
+.schedule-grid i.full {
+  background: rgba(255, 95, 31, .82);
+}
+
+.mini-funnel {
+  display: grid;
+  gap: 8px;
+}
+
+.mini-funnel span,
+.branch-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mini-funnel strong {
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.branch-row {
+  margin-bottom: 9px;
+}
+
+.branch-row:last-child {
+  margin-bottom: 0;
+}
+
+.branch-row span {
+  width: 48px;
+}
+
+.branch-row i {
+  position: relative;
+  flex: 1;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(12, 107, 115, .14);
+}
+
+.branch-row i::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--w);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--teal), var(--mint));
+}
+
+.branch-row strong {
+  width: 34px;
+  font-size: 12px;
+  text-align: right;
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: linear-gradient(95deg, #07555f, #07383f);
+  color: #fff;
+  box-shadow: 0 18px 42px rgba(8, 45, 53, .18);
+}
+
+.metrics article {
+  min-height: 128px;
+  padding: 26px 30px;
+  border-right: 1px solid rgba(255, 255, 255, .14);
+}
+
+.metrics article:last-child {
+  border-right: 0;
+}
+
+.metrics strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.metrics span {
+  display: block;
+  max-width: 210px;
+  color: rgba(255, 255, 255, .84);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 750;
+}
+
+.section {
+  padding: 70px 0 0;
+}
+
+.section h2 {
+  margin-bottom: 18px;
+  font-size: 38px;
+  line-height: 1.14;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.section-intro p:not(.eyebrow),
+.section-heading h2 + p {
+  color: var(--text);
+}
+
+.split__grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 42px;
+}
+
+.section-intro p:last-child {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.62;
+  font-weight: 680;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.audit-grid article,
+.fit-grid article,
+.price-card,
+.accordion details {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 16px 36px rgba(8, 45, 53, .08);
+}
+
+.audit-grid article {
+  min-height: 210px;
+  padding: 26px;
+}
+
+.audit-grid h3,
+.fit-grid h3,
+.price-card h3 {
+  margin-bottom: 11px;
+  font-size: 20px;
+  line-height: 1.24;
+  font-weight: 950;
+}
+
+.audit-grid p,
+.fit-grid p,
+.price-card li,
+.system-steps p,
+.case-card p,
+.accordion p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 690;
+}
+
+.icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-search { background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='8' stroke='%230c6b73' stroke-width='2.4'/%3E%3Cpath d='m22 22 7 7M13 14h6M13 18h4' stroke='%23ff5f1f' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.icon-target { background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='18' cy='18' r='11' stroke='%230c6b73' stroke-width='2.4'/%3E%3Ccircle cx='18' cy='18' r='5' stroke='%23ff5f1f' stroke-width='2.4'/%3E%3Cpath d='M18 4v6M18 26v6M4 18h6M26 18h6' stroke='%230c6b73' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.icon-chat { background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 8h22v15H15l-7 6v-6H7V8Z' stroke='%230c6b73' stroke-width='2.4'/%3E%3Cpath d='M12 14h12M12 18h8' stroke='%23ff5f1f' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.icon-chart { background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 29h24M12 25v-8M18 25V10M24 25V14' stroke='%230c6b73' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='m10 16 7-6 6 4 6-9' stroke='%23ff5f1f' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); }
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.system-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .82);
+  box-shadow: var(--shadow);
+}
+
+.system-steps article {
+  position: relative;
+  min-height: 286px;
+  padding: 32px 26px;
+  border-right: 1px solid var(--line);
+}
+
+.system-steps article:last-child {
+  border-right: 0;
+}
+
+.system-steps span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 44px;
+  border-radius: 50%;
+  background: var(--teal-dark);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.system-steps h3 {
+  margin-bottom: 13px;
+  font-size: 21px;
+  line-height: 1.22;
+  font-weight: 950;
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.fit-grid article {
+  min-height: 180px;
+  padding: 26px;
+}
+
+.fit-grid article::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 5px;
+  margin-bottom: 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--mint), var(--orange));
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: .88fr 1.18fr;
+  gap: 24px;
+}
+
+.quote,
+.dashboard-panel {
+  min-height: 340px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.quote {
+  padding: 34px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .95), rgba(230, 247, 250, .86));
+  border: 1px solid var(--line);
+}
+
+.quote span {
+  display: block;
+  height: 48px;
+  color: var(--orange);
+  font-size: 86px;
+  line-height: .72;
+  font-weight: 950;
+}
+
+.quote h2 {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.quote p {
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.dashboard-panel {
+  padding: 30px;
+  border: 1px solid rgba(7, 74, 82, .18);
+  background: #fff;
+}
+
+.dashboard-panel__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.dashboard-panel__head h2 {
+  max-width: 480px;
+  margin: 0;
+  font-size: 30px;
+}
+
+.dashboard-panel__head strong {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  background: rgba(255, 95, 31, .1);
+  color: var(--orange);
+  font-size: 30px;
+  font-weight: 950;
+}
+
+.funnel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.funnel span {
+  min-height: 104px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #f9fdfe, #eff9fb);
+}
+
+.funnel small {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 820;
+}
+
+.funnel strong {
+  color: var(--teal-dark);
+  font-size: 32px;
+  font-weight: 950;
+}
+
+.check-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 18px;
+}
+
+.check-list span {
+  position: relative;
+  padding-left: 30px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 780;
+}
+
+.check-list span::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--teal) url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3 6.5 2 2L10 3.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.case-card {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.case-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(4, 52, 58, .1) 0, rgba(4, 52, 58, .15) 36%, rgba(4, 52, 58, .9) 100%);
+}
+
+
+.case-card__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 26px;
+  color: #fff;
+}
+
+.case-card__content > span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .18);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.case-card h3 {
+  margin-bottom: 18px;
+  font-size: 29px;
+  line-height: 1.12;
+  font-weight: 950;
+}
+
+.case-card dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.case-card dl div {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .1);
+}
+
+.case-card dt {
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.case-card dd {
+  margin: 5px 0 0;
+  color: rgba(255, 255, 255, .82);
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.case-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, .88);
+}
+
+.clients .section-heading {
+  max-width: 760px;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.client-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .94), rgba(233, 248, 250, .86));
+  box-shadow: var(--shadow);
+}
+
+.client-card::before {
+  content: "";
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  top: 0;
+  height: 4px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, var(--mint), var(--orange));
+}
+
+.client-card__logo {
+  display: flex;
+  align-items: center;
+  min-height: 112px;
+  margin-bottom: 28px;
+}
+
+.client-card__logo--cifra {
+  gap: 18px;
+}
+
+.client-card__logo--cifra img {
+  width: 62px;
+  height: 62px;
+}
+
+.client-card__logo--cifra strong {
+  color: var(--teal-dark);
+  font-size: 28px;
+  line-height: 1.05;
+  font-weight: 950;
+}
+
+.client-card__logo--synergy img {
+  width: min(390px, 100%);
+  max-height: 86px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.client-card p {
+  max-width: 490px;
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 730;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.price-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 430px;
+  padding: 30px;
+}
+
+.price-card--accent {
+  border-color: rgba(255, 95, 31, .36);
+  box-shadow: 0 20px 48px rgba(255, 95, 31, .13);
+}
+
+.price-card em {
+  position: absolute;
+  top: -13px;
+  left: 22px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.price-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--teal);
+  font-size: 32px;
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.price-card > small {
+  display: block;
+  min-height: 22px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.price-card ul {
+  margin: 0 0 24px;
+  padding-left: 18px;
+}
+
+.price-card .button {
+  align-self: end;
+  width: 100%;
+  min-height: 44px;
+  font-size: 12px;
+}
+
+.calculator-card {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 24px;
+  align-items: stretch;
+  padding: 28px;
+  border: 1px solid rgba(8, 45, 53, .12);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .94), rgba(232, 248, 250, .88));
+  box-shadow: var(--shadow);
+}
+
+.calculator-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.calculator-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.calculator-form span {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.calculator-form input {
+  min-height: 52px;
+  width: 100%;
+  border: 1px solid rgba(8, 45, 53, .14);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 18px;
+  font-weight: 900;
+  outline: 0;
+  padding: 0 14px;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.calculator-form input:focus {
+  border-color: rgba(12, 107, 115, .62);
+  box-shadow: 0 0 0 4px rgba(54, 189, 174, .16);
+  transform: translateY(-1px);
+}
+
+.calculator-result {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.calculator-result div {
+  display: grid;
+  align-content: center;
+  min-height: 92px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #075a63, #063940);
+  color: #fff;
+}
+
+.calculator-result small {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, .74);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.calculator-result strong {
+  color: #fff;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1;
+  font-weight: 950;
+  font-variant-numeric: tabular-nums;
+}
+
+.calculator-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: rgba(255, 95, 31, .08);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 760;
+}
+
+.lead-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 36px;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid rgba(12, 107, 115, .18);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(120deg, rgba(7, 80, 88, .96), rgba(4, 56, 63, .96));
+  color: #fff;
+  box-shadow: 0 22px 56px rgba(8, 45, 53, .18);
+}
+
+.lead-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(110deg, transparent 0 32%, rgba(255, 255, 255, .12) 42%, transparent 52% 100%);
+  transform: translateX(-100%);
+  animation: formShimmer 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.lead-card__content,
+.animated-form {
+  position: relative;
+  z-index: 1;
+}
+
+.lead-card .eyebrow {
+  color: #7fe4d8;
+}
+
+.lead-card h2 {
+  max-width: 500px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.12;
+  font-weight: 950;
+}
+
+.lead-card__content > p:not(.eyebrow) {
+  max-width: 470px;
+  color: rgba(255, 255, 255, .82);
+  font-size: 16px;
+  line-height: 1.58;
+  font-weight: 700;
+}
+
+.lead-pulse {
+  display: grid;
+  width: min(320px, 100%);
+  margin-top: 34px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .1);
+  animation: leadPulse 3.8s ease-in-out infinite;
+}
+
+.lead-pulse span,
+.lead-pulse small {
+  color: rgba(255, 255, 255, .76);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.lead-pulse strong {
+  margin: 8px 0 6px;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.animated-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .14);
+}
+
+.animated-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.animated-form label:nth-of-type(4),
+.animated-form button,
+.form-status {
+  grid-column: 1 / -1;
+}
+
+.animated-form span {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.animated-form input,
+.animated-form select,
+.animated-form textarea {
+  width: 100%;
+  border: 1px solid rgba(8, 45, 53, .14);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 720;
+  outline: 0;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.animated-form input,
+.animated-form select {
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.animated-form textarea {
+  resize: vertical;
+  min-height: 108px;
+  padding: 14px;
+}
+
+.animated-form input:focus,
+.animated-form select:focus,
+.animated-form textarea:focus {
+  border-color: rgba(12, 107, 115, .62);
+  box-shadow: 0 0 0 4px rgba(54, 189, 174, .16);
+  transform: translateY(-1px);
+}
+
+.animated-form .button {
+  width: 100%;
+  border: 0;
+}
+
+.form-status {
+  min-height: 22px;
+  margin: 0;
+  color: var(--teal-dark);
+  font-size: 13px;
+  font-weight: 850;
+  text-align: center;
+}
+
+.animated-form.is-sent {
+  animation: formSent .52s ease both;
+}
+
+@keyframes formShimmer {
+  0%, 48% {
+    transform: translateX(-100%);
+  }
+
+  72%, 100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes leadPulse {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, .14);
+  }
+}
+
+@keyframes formSent {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.012);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.faq {
+  padding-bottom: 0;
+}
+
+.accordion {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 14px 38px rgba(8, 45, 53, .08);
+}
+
+.accordion details {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.accordion details:last-child {
+  border-bottom: 0;
+}
+
+.accordion summary {
+  position: relative;
+  min-height: 58px;
+  padding: 19px 54px 17px 24px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  width: 14px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3 5 4 4 4-4' stroke='%230c6b73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform .2s ease;
+}
+
+.accordion details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.accordion p {
+  max-width: 780px;
+  margin: 0;
+  padding: 0 24px 20px;
+}
+
+.final-cta {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 34px;
+  padding: 34px;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(100deg, #075a63, #063940);
+  color: #fff;
+  box-shadow: 0 18px 44px rgba(8, 45, 53, .2);
+}
+
+.final-cta .eyebrow {
+  color: #7fe4d8;
+}
+
+.final-cta h2 {
+  max-width: 700px;
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.22;
+  font-weight: 950;
+}
+
+.final-cta span {
+  position: relative;
+  color: rgba(255, 255, 255, .82);
+  font-size: 13px;
+  font-weight: 820;
+  white-space: nowrap;
+}
+
+.final-cta span::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #20c765;
+}
+
+@media (max-width: 1120px) {
+  .site-header {
+    grid-template-columns: 180px 1fr auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero__grid,
+  .split__grid,
+  .dashboard,
+  .calculator-card,
+  .lead-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__grid {
+    gap: 34px;
+  }
+
+  .hero__media {
+    min-height: 460px;
+  }
+
+  .hero__media img {
+    height: 460px;
+  }
+
+  .metrics,
+  .system-steps,
+  .fit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .system-steps article:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .system-steps article:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-card {
+    min-height: 430px;
+  }
+
+  .client-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 28px, 1160px);
+  }
+
+  .site-header {
+    width: min(100% - 20px, 1210px);
+    grid-template-columns: 132px auto;
+    gap: 12px;
+    min-height: 66px;
+  }
+
+  .brand {
+    width: 126px;
+    height: 36px;
+  }
+
+  .brand img {
+    width: 126px;
+  }
+
+  .header-contact {
+    display: none;
+  }
+
+  .button--small {
+    min-height: 38px;
+    padding-inline: 12px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding-top: 42px;
+  }
+
+  .kilka-flyer {
+    top: 40%;
+    left: -130px;
+    width: 90px;
+    filter: drop-shadow(0 12px 15px rgba(8, 45, 53, .18));
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+  .hero-proof,
+  .metrics,
+  .audit-grid,
+  .system-steps,
+  .fit-grid,
+  .funnel,
+  .check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__media {
+    min-height: 440px;
+  }
+
+  .hero__media img {
+    height: 440px;
+    object-position: 61% center;
+  }
+
+  .hero-float {
+    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+  }
+
+  .hero-float--schedule,
+  .hero-float--branches {
+    display: none;
+  }
+
+  .hero-float--funnel {
+    top: auto;
+    bottom: 16px;
+  }
+
+  .metrics article {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .14);
+  }
+
+  .metrics article:last-child {
+    border-bottom: 0;
+  }
+
+  .section {
+    padding-top: 52px;
+  }
+
+  .section h2 {
+    font-size: 31px;
+  }
+
+  .system-steps article,
+  .system-steps article:nth-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .system-steps article:last-child {
+    border-bottom: 0;
+  }
+
+  .case-card {
+    min-height: 520px;
+  }
+
+  .case-card__content {
+    padding: 20px;
+  }
+
+  .case-card h3 {
+    font-size: 25px;
+  }
+
+  .case-card dl {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-form {
+    grid-template-columns: 1fr;
+  }
+
+  .quote,
+  .dashboard-panel,
+  .calculator-card,
+  .lead-card,
+  .price-card,
+  .final-cta {
+    padding: 24px;
+  }
+
+  .animated-form {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .lead-card h2 {
+    font-size: 30px;
+  }
+
+  .client-card {
+    padding: 24px;
+  }
+
+  .client-card__logo {
+    min-height: auto;
+  }
+
+  .client-card__logo--cifra strong {
+    font-size: 24px;
+  }
+
+  .dashboard-panel__head {
+    display: grid;
+  }
+
+  .final-cta h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .site-header {
+    grid-template-columns: 116px auto;
+    padding-inline: 10px;
+  }
+
+  .brand {
+    width: 110px;
+  }
+
+  .brand img {
+    width: 110px;
+  }
+
+  .case-card dl {
+    gap: 6px;
+  }
+
+  .case-card dl div {
+    padding: 10px 8px;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.breadcrumbs a:hover {
+  color: var(--teal);
+}
+
+.breadcrumbs b {
+  font-weight: 800;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 26px 0 34px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.site-footer a:hover {
+  color: var(--teal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .kilka-flyer,
+  .kilka-flyer img,
+  .fish-wink,
+  .hero-float,
+  .lead-card::before,
+  .lead-pulse,
+  .animated-form.is-sent {
+    animation: none !important;
+  }
+
+  .kilka-flyer {
+    opacity: 0;
+  }
+}
+
+
+/* ===== Создание сайтов: hero browser mockup ===== */
+.browser {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  border: 1px solid rgba(8, 45, 53, .14);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.browser__bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #f4fbfc, #eaf6f8);
+}
+
+.browser__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser__dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(8, 45, 53, .16);
+}
+
+.browser__dots i:nth-child(1) { background: #ff5f57; }
+.browser__dots i:nth-child(2) { background: #febc2e; }
+.browser__dots i:nth-child(3) { background: #28c840; }
+
+.browser__url {
+  flex: 1;
+  max-width: 330px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.browser__url b {
+  color: var(--teal);
+}
+
+.browser__lock {
+  color: #20c765;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.browser__canvas {
+  position: relative;
+  padding: 26px;
+  display: grid;
+  gap: 16px;
+}
+
+.wf {
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(12, 107, 115, .1) 25%, rgba(12, 107, 115, .2) 37%, rgba(12, 107, 115, .1) 63%);
+  background-size: 400% 100%;
+  animation: wfShimmer 2.6s ease infinite;
+  opacity: 0;
+  transform: translateY(14px);
+  animation-fill-mode: forwards;
+}
+
+.wf--show {
+  animation: wfShimmer 2.6s ease infinite, wfIn .55s ease forwards;
+}
+
+.wf-nav { height: 30px; width: 56%; }
+.wf-hero { height: 138px; background: linear-gradient(120deg, rgba(54, 189, 174, .3), rgba(12, 107, 115, .18)); }
+.wf-line { height: 14px; width: 78%; }
+.wf-line--short { width: 52%; }
+.wf-btn {
+  height: 40px;
+  width: 168px;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #ff7434, var(--orange-dark));
+  box-shadow: 0 12px 24px rgba(255, 95, 31, .26);
+}
+.wf-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.wf-cards i {
+  display: block;
+  height: 74px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: rgba(231, 246, 248, .8);
+}
+
+@keyframes wfIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wfShimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+.gauge-float {
+  position: absolute;
+  top: 70px;
+  right: 22px;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: 148px;
+  padding: 16px 14px;
+  border: 1px solid rgba(255, 255, 255, .62);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .92);
+  box-shadow: 0 18px 34px rgba(8, 45, 53, .16);
+  backdrop-filter: blur(12px);
+  animation: heroFloat 6.4s ease-in-out infinite;
+}
+
+.gauge {
+  position: relative;
+  width: 92px;
+  height: 92px;
+}
+
+.gauge svg {
+  transform: rotate(-90deg);
+}
+
+.gauge .gauge-track {
+  fill: none;
+  stroke: rgba(12, 107, 115, .12);
+  stroke-width: 8;
+}
+
+.gauge .gauge-value {
+  fill: none;
+  stroke: #20c765;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 264;
+  stroke-dashoffset: 264;
+  animation: gaugeFill 2.2s cubic-bezier(.2, .7, .3, 1) .8s forwards;
+}
+
+.gauge b {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #1a9b4b;
+  font-size: 26px;
+  font-weight: 950;
+}
+
+.gauge-float small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@keyframes gaugeFill {
+  to { stroke-dashoffset: 13; }
+}
+
+.lead-toast {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  z-index: 3;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 18px 13px 14px;
+  border: 1px solid rgba(255, 255, 255, .62);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 18px 34px rgba(8, 45, 53, .18);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: toastIn 9s ease-in-out 2.2s infinite;
+}
+
+.lead-toast i {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(32, 199, 101, .14);
+  color: #1a9b4b;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 950;
+}
+
+.lead-toast b {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.lead-toast small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+@keyframes toastIn {
+  0%, 6% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  12%, 56% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  64%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== Сравнение ===== */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.compare-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 16px 36px rgba(8, 45, 53, .08);
+}
+
+.compare-card--win {
+  border-color: rgba(12, 107, 115, .4);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .96), rgba(231, 248, 250, .9));
+  box-shadow: 0 20px 48px rgba(12, 107, 115, .16);
+}
+
+.compare-card h3 {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 950;
+}
+
+.compare-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.compare-card li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 720;
+}
+
+.compare-card li::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.compare-card--lose li::before {
+  background: rgba(255, 95, 31, .14) url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m2 2 6 6M8 2 2 8' stroke='%23dc4812' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/9px no-repeat;
+}
+
+.compare-card--win li::before {
+  background: var(--teal) url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m3 6.5 2 2L10 3.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;
+}
+
+/* ===== Гарантия ===== */
+.guarantee {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 24px 28px;
+  border: 1px solid rgba(32, 199, 101, .35);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(32, 199, 101, .08), rgba(54, 189, 174, .1));
+}
+
+.guarantee i {
+  display: grid;
+  place-items: center;
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #20c765;
+  color: #fff;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 950;
+  box-shadow: 0 10px 22px rgba(32, 199, 101, .35);
+}
+
+.guarantee b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: 950;
+}
+
+.guarantee p {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 720;
+}
+
+/* ===== Калькулятор сайта ===== */
+.calculator-form select {
+  min-height: 52px;
+  width: 100%;
+  border: 1px solid rgba(8, 45, 53, .14);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 850;
+  outline: 0;
+  padding: 0 14px;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.calculator-form select:focus {
+  border-color: rgba(12, 107, 115, .62);
+  box-shadow: 0 0 0 4px rgba(54, 189, 174, .16);
+}
+
+.calculator-form .checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  grid-template-columns: none;
+}
+
+.calculator-form .checkbox input {
+  width: 22px;
+  height: 22px;
+  min-height: 0;
+  accent-color: var(--teal);
+}
+
+.calculator-form .checkbox span {
+  font-size: 13px;
+}
+
+@media (max-width: 1120px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .browser {
+    min-height: 440px;
+  }
+
+  .gauge-float {
+    top: 56px;
+    right: 12px;
+    width: 124px;
+  }
+
+  .guarantee {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf,
+  .wf--show,
+  .gauge .gauge-value,
+  .lead-toast,
+  .gauge-float {
+    animation: none !important;
+  }
+
+  .wf {
+    opacity: 1;
+    transform: none;
+  }
+
+  .gauge .gauge-value {
+    stroke-dashoffset: 13;
+  }
+
+  .lead-toast {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===== Сервисные страницы: мокап выдачи/ленты ===== */
+.serp {
+  display: grid;
+  gap: 14px;
+}
+
+.serp__search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.serp__search::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' r='5' stroke='%230c6b73' stroke-width='2'/%3E%3Cpath d='m11 11 4 4' stroke='%23ff5f1f' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.serp__item {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: wfIn .5s ease forwards;
+}
+
+.serp__item--win {
+  border-color: rgba(12, 107, 115, .45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .98), rgba(231, 248, 250, .9));
+  box-shadow: 0 14px 30px rgba(12, 107, 115, .14);
+}
+
+.serp__badge {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 95, 31, .12);
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.serp__badge--green {
+  background: rgba(32, 199, 101, .14);
+  color: #1a9b4b;
+}
+
+.serp__item b {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--teal-dark);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.serp__item span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.serp__bars {
+  display: grid;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.serp__bars small {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.serp__bars i {
+  position: relative;
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(12, 107, 115, .12);
+  overflow: hidden;
+}
+
+.serp__bars i::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--w);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--teal), var(--mint));
+  animation: barGrow 1.6s cubic-bezier(.2, .7, .3, 1) .6s both;
+}
+
+@keyframes barGrow {
+  from { width: 0; }
+  to { width: var(--w); }
+}
+
+/* ===== Глобальное меню «Услуги» + выпадающий список ===== */
+.nav { gap: 24px; }
+.nav-dd { position: relative; display: inline-flex; }
+.nav-dd__btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin: 0; padding: 10px 0;
+  font: inherit; font-weight: 800; color: inherit;
+  background: none; border: 0; cursor: pointer;
+}
+.nav-dd__btn svg { transition: transform .2s ease; }
+.nav-dd__menu {
+  position: absolute; top: calc(100% + 12px); left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  display: grid; gap: 2px; min-width: 250px; padding: 8px;
+  background: #fff; border: 1px solid rgba(8, 45, 53, .1);
+  border-radius: 16px; box-shadow: 0 26px 54px rgba(8, 45, 53, .18);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease; z-index: 60;
+}
+.nav-dd__menu::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+.nav-dd:hover .nav-dd__menu,
+.nav-dd:focus-within .nav-dd__menu,
+.nav-dd.is-open .nav-dd__menu {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
+}
+.nav-dd:hover .nav-dd__btn svg,
+.nav-dd.is-open .nav-dd__btn svg { transform: rotate(180deg); }
+.nav-dd__menu a {
+  padding: 10px 12px; border-radius: 10px;
+  font-size: 13.5px; font-weight: 700; white-space: nowrap; color: var(--teal-dark);
+}
+.nav-dd__menu a:hover { background: rgba(12, 107, 115, .08); }
+.nav-dd__menu a[aria-current="page"] { background: rgba(255, 95, 31, .12); color: var(--orange-dark); }
+
+/* ===== Блок команды ===== */
+.team__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: center; }
+.team__media { position: relative; border-radius: calc(var(--radius) + 10px); overflow: hidden; box-shadow: 0 30px 60px rgba(8, 45, 53, .16); }
+.team__media img { display: block; width: 100%; height: 100%; min-height: 380px; object-fit: cover; }
+.team__badge {
+  position: absolute; left: 18px; bottom: 18px; display: grid; gap: 2px;
+  padding: 13px 18px; border-radius: 16px; background: rgba(255, 255, 255, .93);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); box-shadow: 0 14px 30px rgba(8, 45, 53, .18);
+}
+.team__badge b { font-size: 26px; font-weight: 900; color: var(--orange-dark); line-height: 1; }
+.team__badge span { font-size: 12px; font-weight: 700; color: var(--teal-dark); }
+.team__content .eyebrow { margin-bottom: 10px; }
+.team__roles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; }
+.role-card { padding: 16px 18px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255, 255, 255, .72); }
+.role-card b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); margin-bottom: 5px; }
+.role-card span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* ===== Блок доказательств (реальные кейсы) ===== */
+.proof__grid { display: grid; gap: 18px; margin-top: 26px; }
+.proof__grid figure { margin: 0; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #0c5158; box-shadow: var(--shadow); }
+.proof__grid img { display: block; width: 100%; height: auto; }
+.proof__grid figcaption { padding: 13px 18px; font-size: 13.5px; font-weight: 700; color: #eafcff; }
+
+@media (max-width: 1120px) {
+  .team__grid { grid-template-columns: 1fr; gap: 30px; }
+}
+@media (max-width: 760px) {
+  .team__roles { grid-template-columns: 1fr; }
+}
+</style>
+  </head>
+  <body><noscript><div><img src="https://mc.yandex.ru/watch/109805845" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Килька Маркетинг — на главную">
+        <img src="/_next/static/media/logo.e751ec25.svg" alt="Килька Маркетинг" width="200" height="56">
+      </a>
+      <nav class="nav" aria-label="Главное меню">
+        <a href="/">Главная</a>
+        <div class="nav-dd">
+          <button type="button" class="nav-dd__btn" aria-haspopup="true" aria-expanded="false">Услуги<svg viewBox="0 0 10 6" width="11" height="7" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav-dd__menu" role="menu">
+          <a href="/obrazovatelnye-proekty/">Образовательные проекты</a>
+          <a href="/sozdanie-saitov/">Создание сайтов</a>
+          <a href="/kontekstnaya-reklama/" aria-current="page">Контекстная реклама</a>
+          <a href="/smm-prodvizhenie/">SMM-продвижение</a>
+          <a href="/seo-prodvizhenie/">SEO-продвижение</a>
+          </div>
+        </div>
+        <a href="/cases">Кейсы</a>
+        <a href="/blog">Блог</a>
+        <a href="/contact-us">Контакты</a>
+      </nav>
+      <div class="header-contact">
+        <a class="phone" href="tel:+79521152800">+7 (952) 115-28-00</a>
+        <a class="messenger" href="https://t.me/kilka_marketing">Telegram — ответ за 15 минут</a>
+      </div>
+      <a class="button button--small" href="#contacts">Получить аудит</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="kilka-flyer" aria-hidden="true">
+          <img src="/images/edu/kilka-fish.webp" alt="" width="400" height="331" decoding="async">
+          <span class="fish-wink"></span>
+        </div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span>/</span><b>Контекстная реклама</b></nav>
+            <p class="eyebrow">Контекстная реклама под заявки</p>
+            <h1>Яндекс Директ, который приводит клиентов, а не тратит бюджет</h1>
+            <p class="lead">Настраиваем и ведём контекстную рекламу под одну цель - заявки и продажи. Считаем стоимость обращения, отключаем слабые связки и каждую неделю показываем, куда ушёл каждый рубль.</p>
+            <div class="hero__actions">
+              <a class="button" href="#contacts">Получить аудит рекламы</a>
+              <a class="button button--ghost" href="#included">Что входит в работу</a>
+            </div>
+            <div class="hero-proof" aria-label="Что входит в работу">
+              <span>Аудит текущих кампаний бесплатно</span>
+              <span>Запуск рекламы от 7 дней</span>
+              <span>Отчёт по деньгам каждую неделю</span>
+            </div>
+          </div>
+
+          <div class="hero__media browser" aria-label="Так выглядит выдача с вашей рекламой">
+            <div class="browser__bar">
+              <span class="browser__dots"><i></i><i></i><i></i></span>
+              <span class="browser__url"><span class="browser__lock">●</span> яндекс: <b>ваша услуга</b></span>
+            </div>
+            <div class="browser__canvas serp" aria-hidden="true">
+              <div class="serp__search">ваша услуга + город</div>
+              <div class="serp__item serp__item--win" style="animation-delay:.4s"><span class="serp__badge">Реклама</span><b>Ваша компания - первое место в выдаче</b><span>Точный оффер под запрос · быстрый сайт · заявка в 2 клика</span></div>
+              <div class="serp__item" style="animation-delay:.7s"><span class="serp__badge">Реклама</span><b>Конкурент 1</b><span>Объявление без оффера и с медленным сайтом</span></div>
+              <div class="serp__item" style="animation-delay:.95s"><b>Конкурент 2</b><span>Органическая выдача</span></div>
+              <div class="serp__bars" style="animation-delay:1.2s"><small>Распределение бюджета по конверсиям</small><i style="--w:86%"></i><i style="--w:54%"></i><i style="--w:32%"></i></div>
+            </div>
+            <div class="gauge-float">
+              <div class="gauge">
+                <svg viewBox="0 0 92 92" width="92" height="92">
+                  <circle class="gauge-track" cx="46" cy="46" r="42"></circle>
+                  <circle class="gauge-value" cx="46" cy="46" r="42"></circle>
+                </svg>
+                <b class="count-up" data-count="7" data-prefix="от " data-suffix="">от 7</b>
+              </div>
+              <small>дней до запуска кампаний</small>
+            </div>
+            <div class="lead-toast">
+              <i>✓</i>
+              <span><b>Заявка из Директа</b><small>стоимость ниже плановой</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics container" aria-label="Ключевые показатели">
+        <article>
+          <strong class="count-up" data-count="7" data-prefix="от " data-suffix=" дней">от 7 дней</strong>
+          <span>от брифа до первых показов рекламы</span>
+        </article>
+        <article>
+          <strong class="count-up" data-count="3" data-suffix=" дня">3 дня</strong>
+          <span>на бесплатный аудит текущих кампаний</span>
+        </article>
+        <article>
+          <strong class="count-up" data-count="4" data-suffix=" отчёта">4 отчёта</strong>
+          <span>в месяц - по заявкам и деньгам, а не по кликам</span>
+        </article>
+        <article>
+          <strong class="count-up" data-count="100" data-suffix="%">100%</strong>
+          <span>доступы к кабинетам остаются у вас</span>
+        </article>
+      </section>
+
+      <section class="section split" id="approach">
+        <div class="container split__grid">
+          <div class="section-intro">
+            <p class="eyebrow">Подход</p>
+            <h2>Реклама без аналитики - это лотерея. Мы так не работаем</h2>
+            <p>Перед запуском считаем экономику: сколько стоит ваша заявка сейчас, сколько может стоить и какая цена обращения допустима, чтобы реклама окупалась. Только потом включаем трафик.</p>
+          </div>
+          <div class="audit-grid">
+            <article>
+              <span class="icon icon-search" aria-hidden="true"></span>
+              <h3>Аудит и семантика</h3>
+              <p>Разбираем текущие кампании, собираем запросы, по которым ищут именно вашу услугу, и чистим мусорные показы.</p>
+            </article>
+            <article>
+              <span class="icon icon-target" aria-hidden="true"></span>
+              <h3>Объявления и связки</h3>
+              <p>Пишем объявления под каждый сегмент запросов, тестируем заголовки и посадочные, отключаем слабые связки.</p>
+            </article>
+            <article>
+              <span class="icon icon-chart" aria-hidden="true"></span>
+              <h3>Аналитика до денег</h3>
+              <p>Настраиваем Метрику, цели и коллтрекинг при необходимости: видно, какое объявление принесло заявку и оплату.</p>
+            </article>
+            <article>
+              <span class="icon icon-chat" aria-hidden="true"></span>
+              <h3>Еженедельное ведение</h3>
+              <p>Корректируем ставки, минус-слова и бюджеты каждую неделю. Отчёт - в цифрах заявок, а не в красивых графиках.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section system container" id="process">
+        <div class="section-heading">
+          <p class="eyebrow">Процесс</p>
+          <h2>Запуск за четыре понятных шага</h2>
+        </div>
+        <div class="system-steps">
+          <article>
+            <span>01</span>
+            <h3>Аудит и план</h3>
+            <p>Смотрим кампании, сайт и нишу. Даём план: цена заявки, бюджет, прогноз. Дни 1-3.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Сборка кампаний</h3>
+            <p>Семантика, минус-слова, объявления, быстрые ссылки, настройка целей в Метрике. Дни 4-6.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Запуск и тесты</h3>
+            <p>Включаем показы, следим за первыми заявками, быстро отключаем неработающее. Дни 7-14.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Оптимизация</h3>
+            <p>Перераспределяем бюджет на связки, которые дают заявки дешевле. Далее - еженедельно.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dashboard container" id="included">
+        <div class="quote">
+          <span>“</span>
+          <h2>Бюджет на рекламу - это инвестиция. У инвестиции должна быть отчётность</h2>
+          <p>Поэтому в наших отчётах нет «охватов» и «показов» в вакууме - только заявки, их стоимость и динамика по неделям.</p>
+        </div>
+        <div class="dashboard-panel">
+          <div class="dashboard-panel__head">
+            <div>
+              <p class="eyebrow">Что входит</p>
+              <h2>Полный контур работы с Директом</h2>
+            </div>
+          </div>
+          <div class="check-list">
+            <span>Поисковые кампании и РСЯ</span>
+            <span>Ретаргетинг на тёплую аудиторию</span>
+            <span>Мастер кампаний и автотаргетинг под контролем</span>
+            <span>Минус-слова и чистка площадок</span>
+            <span>Метрика, цели и отчёт по заявкам</span>
+            <span>UTM-разметка всех объявлений</span>
+            <span>А/Б-тесты объявлений и посадочных</span>
+            <span>Рекомендации по сайту и офферу</span>
+          </div>
+        </div>
+      </section>
+
+            <section class="section team container" id="team">
+        <div class="team__grid">
+          <div class="team__media">
+            <img src="/_next/static/media/target.64b6a5b6.jpg" alt="Команда Килька Маркетинг управляет контекстной рекламой" width="1280" height="720" loading="lazy" decoding="async">
+            <div class="team__badge"><b>7 лет</b><span>в перформанс-маркетинге</span></div>
+          </div>
+          <div class="team__content">
+            <p class="eyebrow">Кто ведёт ваш проект</p>
+            <h2>Над рекламой работает команда, а не один «универсал»</h2>
+            <p class="lead">Контекстом в «Кильке» занимается не один человек «на всё», а связка специалистов: каждый отвечает за свой участок, поэтому ничего не теряется между настройкой, аналитикой и отчётом.</p>
+            <div class="team__roles">
+            <div class="role-card"><b>Маркетолог-стратег</b><span>Считает экономику: сколько стоит заявка и клиент и какой бюджет реально окупится.</span></div>
+            <div class="role-card"><b>Специалист по Директу</b><span>Собирает семантику, пишет объявления, ведёт ставки и чистит мусорный трафик.</span></div>
+            <div class="role-card"><b>Аналитик</b><span>Настраивает цели и сквозную аналитику — видно, какая связка приносит деньги.</span></div>
+            <div class="role-card"><b>Аккаунт-менеджер</b><span>На связи в Telegram, присылает отчёты и держит сроки запуска.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section lead-section container" id="lead-form">
+        <div class="lead-card">
+          <div class="lead-card__content">
+            <p class="eyebrow">Форма обратной связи</p>
+            <h2>Пришлём аудит рекламы и план запуска</h2>
+            <p>Заполните форму - посмотрим ваши кампании (или нишу, если рекламы ещё нет) и честно скажем, сколько может стоить заявка и какой бюджет нужен на тест.</p>
+            <div class="lead-pulse" aria-hidden="true">
+              <span>Аудит и план</span>
+              <strong>3 дня</strong>
+              <small>среднее время подготовки</small>
+            </div>
+          </div>
+          <form class="animated-form" action="/form.php" method="post">
+            <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;overflow:hidden">
+            <label>
+              <span>Ваше имя</span>
+              <input name="name" type="text" placeholder="Например, Сергей" required>
+            </label>
+            <label>
+              <span>Телефон или Telegram</span>
+              <input name="phone" type="tel" placeholder="+7 999 000-00-00" required>
+            </label>
+            <label>
+              <span>Что с рекламой сейчас</span>
+              <select name="project" required>
+                <option value="">Выберите вариант</option>
+                <option>Реклама работает, но дорогие заявки</option>
+                <option>Реклама была - отключили</option>
+                <option>Ещё не запускали</option>
+                <option>Нужно второе мнение по подрядчику</option>
+              </select>
+            </label>
+            <label>
+              <span>Пара слов о проекте</span>
+              <textarea name="message" rows="4" placeholder="Например: стоматология в Казани, заявка выходит 3 500 ₽ - дорого"></textarea>
+            </label>
+            <button class="button" type="submit">Получить аудит бесплатно</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+
+      <section class="section faq container" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="accordion">
+          <details>
+            <summary>Какой бюджет нужен для старта?</summary>
+            <p>Зависит от ниши и города: в большинстве услуговых ниш тест начинается от 30-50 тысяч рублей рекламного бюджета в месяц. На аудите посчитаем вашу нишу и скажем цифру до запуска.</p>
+          </details>
+          <details>
+            <summary>Когда появятся первые заявки?</summary>
+            <p>Обычно в первые 3-7 дней после запуска кампаний. Стабильная цена заявки выстраивается за 3-4 недели оптимизации.</p>
+          </details>
+          <details>
+            <summary>Чем вы отличаетесь от фрилансера?</summary>
+            <p>Системой: фиксированный план запуска, еженедельные отчёты по деньгам, аналитика до заявки и прозрачные доступы. И мы агентство полного цикла - если заявки теряются на сайте или в отделе продаж, мы это увидим и скажем.</p>
+          </details>
+          <details>
+            <summary>Доступы к рекламному кабинету останутся у меня?</summary>
+            <p>Да, всегда. Кабинет, Метрика и все наработки - ваша собственность. Мы работаем в ваших аккаунтах, а не «у себя».</p>
+          </details>
+          <details>
+            <summary>Вы гарантируете количество заявок?</summary>
+            <p>Гарантировать точное число заявок в аукционной системе нельзя - и тот, кто гарантирует, лукавит. Мы гарантируем прозрачность: план, еженедельные цифры и быстрые решения, если что-то идёт не так.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta container" id="contacts">
+        <div>
+          <p class="eyebrow">Следующий шаг</p>
+          <h2>Бесплатно разберём вашу рекламу и скажем, где она теряет деньги.</h2>
+        </div>
+        <a class="button" href="https://t.me/kilka_marketing">Обсудить в Telegram</a>
+        <span>Ответим в течение 15 минут</span>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <nav aria-label="Карта сайта">
+        <a href="/">Главная</a>
+        <a href="/obrazovatelnye-proekty/">Образовательные проекты</a>
+        <a href="/sozdanie-saitov/">Создание сайтов</a>
+        <a href="/smm-prodvizhenie/">SMM-продвижение</a>
+        <a href="/seo-prodvizhenie/">SEO-продвижение</a>
+        <a href="/cases">Кейсы</a>
+        <a href="/blog">Блог</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact-us">Контакты</a>
+        <a href="/privacy-policy">Политика конфиденциальности</a>
+      </nav>
+      <span>Борис: <a href="tel:+79521152800">+7 (952) 115-28-00</a> · <a href="mailto:sales@kilkamarketing.ru">sales@kilkamarketing.ru</a> · © 2026 Килька Маркетинг</span>
+    </footer>
+<script>
+document.querySelectorAll(".accordion details").forEach((item) => {
+  item.addEventListener("toggle", () => {
+    if (!item.open) return;
+    document.querySelectorAll(".accordion details").forEach((other) => {
+      if (other !== item) other.removeAttribute("open");
+    });
+  });
+});
+
+document.querySelectorAll(".wf").forEach((el) => el.classList.add("wf--show"));
+
+const counters = document.querySelectorAll(".count-up");
+
+const formatCounter = (element, value) => {
+  const decimals = Number(element.dataset.decimals || 0);
+  const prefix = element.dataset.prefix || "";
+  const suffix = element.dataset.suffix || "";
+  const formatted = new Intl.NumberFormat("ru-RU", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  }).format(value);
+  return `${prefix}${formatted}${suffix}`;
+};
+
+const animateCounter = (element) => {
+  if (element.dataset.counted === "true") return;
+  element.dataset.counted = "true";
+
+  const target = Number(element.dataset.count);
+  if (!Number.isFinite(target)) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    element.textContent = formatCounter(element, target);
+    return;
+  }
+
+  const duration = 2500;
+  const startTime = performance.now();
+
+  const tick = (now) => {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const value = target * progress;
+    const decimals = Number(element.dataset.decimals || 0);
+    element.textContent = formatCounter(element, decimals ? value : Math.round(value));
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      element.textContent = formatCounter(element, target);
+    }
+  };
+
+  element.textContent = formatCounter(element, 0);
+  requestAnimationFrame(tick);
+};
+
+counters.forEach((counter) => {
+  const target = Number(counter.dataset.count);
+  if (Number.isFinite(target)) {
+    counter.textContent = formatCounter(counter, 0);
+  }
+});
+
+if ("IntersectionObserver" in window) {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.35, rootMargin: "0px 0px -30px 0px" });
+  counters.forEach((counter) => counterObserver.observe(counter));
+} else {
+  counters.forEach(animateCounter);
+}
+
+const money = new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 0 });
+
+
+document.querySelectorAll(".animated-form").forEach((form) => {
+  const status = form.querySelector(".form-status");
+  const button = form.querySelector("button[type='submit']");
+  const defaultText = button?.textContent || "Отправить заявку";
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Отправляем...";
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form)
+      });
+      const data = await response.json().catch(() => ({ ok: response.ok }));
+      if (!data.ok) throw new Error("send failed");
+
+      form.classList.remove("is-sent");
+      void form.offsetWidth;
+      form.classList.add("is-sent");
+      form.reset();
+
+      if (button) button.textContent = "Заявка отправлена";
+      if (status) {
+        status.textContent = "Спасибо! Заявка отправлена - ответим в течение 15 минут.";
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = "Не получилось отправить. Напишите в Telegram @kilka_marketing или позвоните +7 (952) 115-28-00.";
+      }
+      if (button) button.textContent = defaultText;
+    }
+
+    window.setTimeout(() => {
+      if (button) {
+        button.textContent = defaultText;
+        button.disabled = false;
+      }
+    }, 4000);
+  });
+});
+    </script>
+    <script>
+  (function () {
+    document.querySelectorAll('.nav-dd__btn').forEach(function (btn) {
+      var dd = btn.closest('.nav-dd');
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var open = dd.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+    function closeAll() {
+      document.querySelectorAll('.nav-dd.is-open').forEach(function (dd) {
+        dd.classList.remove('is-open');
+        var b = dd.querySelector('.nav-dd__btn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    }
+    document.addEventListener('click', function (e) {
+      document.querySelectorAll('.nav-dd.is-open').forEach(function (dd) {
+        if (!dd.contains(e.target)) {
+          dd.classList.remove('is-open');
+          var b = dd.querySelector('.nav-dd__btn');
+          if (b) b.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.keyCode === 27) closeAll();
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+openpyxl==3.1.5
+anthropic>=0.105.0
+pymorphy3>=2.0.2        # лемматизация для сентимента (обязательно)
+pymorphy3-dicts-ru      # словарь для pymorphy3
+natasha>=1.6.0          # NER: PER/ORG/LOC (опционально, ~300MB моделей)

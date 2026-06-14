@@ -1,0 +1,73 @@
+services:
+  rsshub:
+    image: diygod/rsshub:latest
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      CACHE_TYPE: memory
+      CACHE_EXPIRE: "300"
+      DISALLOW_ROBOT: "1"
+      NO_RANDOM_UA: "1"
+      ALLOW_LOCALHOST: "1"
+      VK_ACCESS_TOKEN: ${VK_ACCESS_TOKEN:-}
+    expose:
+      - "1200"
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - rsshub
+    environment:
+      MENTION_MONITOR_USER: ${MENTION_MONITOR_USER:-admin}
+      MENTION_MONITOR_PASSWORD: ${MENTION_MONITOR_PASSWORD:?set MENTION_MONITOR_PASSWORD in .env}
+      VK_REDIRECT_URI: ${VK_REDIRECT_URI:-https://109-235-117-6.sslip.io/vk-oauth-callback}
+    volumes:
+      - ./config.json:/app/config.json
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+    expose:
+      - "8765"
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["local-ai"]
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    expose:
+      - "11434"
+
+  worker:
+    build: .
+    restart: unless-stopped
+    command: ["python", "run.py", "watch", "--minutes", "${COLLECT_INTERVAL_MINUTES:-30}"]
+    environment:
+      MENTION_MONITOR_USER: ${MENTION_MONITOR_USER:-admin}
+      MENTION_MONITOR_PASSWORD: ${MENTION_MONITOR_PASSWORD:?set MENTION_MONITOR_PASSWORD in .env}
+      VK_REDIRECT_URI: ${VK_REDIRECT_URI:-https://109-235-117-6.sslip.io/vk-oauth-callback}
+    volumes:
+      - ./config.json:/app/config.json
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env}
+      ACME_EMAIL: ${ACME_EMAIL:-admin@example.com}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:
+  ollama_data:

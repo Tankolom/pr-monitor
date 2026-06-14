@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /form.php
+Disallow: /thanks.html
+Disallow: /leads/
+Disallow: /*?smtp=
+
+User-agent: Yandex
+Allow: /
+Disallow: /form.php
+Disallow: /thanks.html
+Disallow: /leads/
+Clean-param: smtp&utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid /
+
+Sitemap: https://kilkamarketing.ru/sitemap.xml

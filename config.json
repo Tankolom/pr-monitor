@@ -1,0 +1,547 @@
+{
+  "database": "data/mentions.db",
+  "raw_dir": "data/raw",
+  "secrets_file": "data/secrets.json",
+  "webhooks": [],
+  "fetch_limit_per_query": 40,
+  "max_queries_per_project": 24,
+  "page_read_limit_per_run": 40,
+  "user_agent": "MentionMonitorMVP/0.1 (+local research tool)",
+  "ai": {
+    "ollama_enabled": true,
+    "ollama_base_url": "http://localhost:11434",
+    "ollama_model": "qwen2.5:1.5b",
+    "ollama_timeout": 75,
+    "claude_enabled": true,
+    "claude_model": "claude-sonnet-4-6",
+    "claude_max_tokens": 2000,
+    "yandex_gpt_enabled": true,
+    "yandex_gpt_model": "yandexgpt/latest",
+    "yandex_gpt_max_tokens": 2000
+  },
+  "projects": [],
+  "sources": [
+    {
+      "name": "Google News RU",
+      "type": "google_news",
+      "enabled": true
+    },
+    {
+      "name": "GDELT News Index",
+      "type": "gdelt_news",
+      "enabled": true
+    },
+    {
+      "name": "NewsData.io",
+      "type": "newsdata",
+      "enabled": true,
+      "api_key_env": "NEWSDATA_API_KEY",
+      "country": "ru",
+      "language": "ru"
+    },
+    {
+      "name": "РИА Новости",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://ria.ru/export/rss2/index.xml"
+    },
+    {
+      "name": "ТАСС",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://tass.ru/rss/v2.xml"
+    },
+    {
+      "name": "Интерфакс",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.interfax.ru/rss.asp"
+    },
+    {
+      "name": "РБК",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss"
+    },
+    {
+      "name": "Коммерсантъ",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.kommersant.ru/RSS/news.xml"
+    },
+    {
+      "name": "Ведомости",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.vedomosti.ru/rss/news"
+    },
+    {
+      "name": "Российская газета",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://rg.ru/xml/index.xml"
+    },
+    {
+      "name": "Известия",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://iz.ru/xml/rss/all.xml"
+    },
+    {
+      "name": "Lenta.ru",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://lenta.ru/rss"
+    },
+    {
+      "name": "CNews",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.cnews.ru/inc/rss/news.xml"
+    },
+    {
+      "name": "Хабр Новости",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://habr.com/ru/rss/news/?fl=ru"
+    },
+    {
+      "name": "Новый Калининград",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.newkaliningrad.ru/news/rss.xml"
+    },
+    {
+      "name": "Клопс",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://admin.klops.ru/rss/rss"
+    },
+    {
+      "name": "Google Programmable Search",
+      "type": "google_custom_search",
+      "enabled": false,
+      "api_key_env": "GOOGLE_SEARCH_API_KEY",
+      "cx_env": "GOOGLE_SEARCH_CX"
+    },
+    {
+      "name": "Google через Serper",
+      "type": "serper_google",
+      "enabled": true,
+      "api_key_env": "SERPER_API_KEY",
+      "country": "ru",
+      "language": "ru"
+    },
+    {
+      "name": "VK public posts",
+      "type": "vk_search",
+      "enabled": true,
+      "access_token_env": "VK_ACCESS_TOKEN",
+      "api_version": "5.199"
+    },
+    {
+      "name": "Yandex Search API",
+      "type": "yandex_search",
+      "enabled": true,
+      "api_key_env": "YANDEX_SEARCH_API_KEY",
+      "folder_id_env": "YANDEX_FOLDER_ID"
+    },
+    {
+      "name": "Открытые страницы и каталоги",
+      "type": "web_pages",
+      "enabled": true,
+      "urls": []
+    },
+    {
+      "name": "МК (Московский Комсомолец)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.mk.ru/rss/news/index.xml"
+    },
+    {
+      "name": "АиФ",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://aif.ru/rss/all.php"
+    },
+    {
+      "name": "RT Russian",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://russian.rt.com/rss"
+    },
+    {
+      "name": "360tv.ru",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://360tv.ru/rss"
+    },
+    {
+      "name": "Взгляд",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://vz.ru/rss.xml"
+    },
+    {
+      "name": "Правда.ру",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.pravda.ru/export.xml"
+    },
+    {
+      "name": "Газета.ру",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.gazeta.ru/export/rss/first.xml"
+    },
+    {
+      "name": "Regnum",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://regnum.ru/rss/"
+    },
+    {
+      "name": "Ura.news (Урал/федеральный)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://ura.news/rss"
+    },
+    {
+      "name": "47news (Ленинградская область)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://47news.ru/rss/"
+    },
+    {
+      "name": "Вологда Регион",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://vologdaregion.ru/rss"
+    },
+    {
+      "name": "Черинфо (Вологда)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://cherinfo.ru/rss/news"
+    },
+    {
+      "name": "35Media (Вологда)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://35media.ru/rss"
+    },
+    {
+      "name": "Брянск.news",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://bryansk.news/rss"
+    },
+    {
+      "name": "TV Губерния (Воронеж)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://tv-gubernia.ru/rss/"
+    },
+    {
+      "name": "Ярославль (Безформата)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://yaroslavl.bezformata.com/rss.xml"
+    },
+    {
+      "name": "KazanFirst (Казань)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.kazanfirst.ru/rss"
+    },
+    {
+      "name": "63.ru (Самара)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://63.ru/rss/"
+    },
+    {
+      "name": "UFA1 (Уфа)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://ufa1.ru/rss"
+    },
+    {
+      "name": "59.ru (Пермь)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://59.ru/rss/"
+    },
+    {
+      "name": "Sarnovosti (Саратов)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://sarnovosti.ru/rss.php"
+    },
+    {
+      "name": "V1.ru (Волгоград)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://v1.ru/rss/"
+    },
+    {
+      "name": "72.ru (Тюмень)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://72.ru/rss/"
+    },
+    {
+      "name": "74.ru (Челябинск)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://74.ru/rss/"
+    },
+    {
+      "name": "Kuzbass85 (Кемерово)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://kuzbass85.ru/rss/"
+    },
+    {
+      "name": "161.ru (Ростов-на-Дону)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://161.ru/rss/"
+    },
+    {
+      "name": "Yugopolis (Краснодар)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.yugopolis.ru/feed/rss/"
+    },
+    {
+      "name": "Kavpolit (Дагестан/СКФО)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://kavpolit.com/rss"
+    },
+    {
+      "name": "TodayKhv (Хабаровск)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://todaykhv.ru/rss/"
+    },
+    {
+      "name": "Newsvl (Владивосток)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://www.newsvl.ru/rss/"
+    },
+    {
+      "name": "YSIA (Якутия)",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://ysia.ru/feed/"
+    },
+    {
+      "name": "TG: РИА Новости",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/rian_ru"
+    },
+    {
+      "name": "TG: ТАСС",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/tass_agency"
+    },
+    {
+      "name": "TG: Интерфакс",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/interfax_russia"
+    },
+    {
+      "name": "TG: РБК",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/rbc_news"
+    },
+    {
+      "name": "TG: Коммерсантъ",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/kommersant"
+    },
+    {
+      "name": "TG: Ведомости",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/vedomosti"
+    },
+    {
+      "name": "TG: RT Russian",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/rt_russian"
+    },
+    {
+      "name": "TG: Известия",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/izvestia"
+    },
+    {
+      "name": "TG: МК",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/mknews"
+    },
+    {
+      "name": "TG: АиФ",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/aif_ru"
+    },
+    {
+      "name": "TG: Газета.ру",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/gazeta_ru"
+    },
+    {
+      "name": "TG: Regnum",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/regnum_na"
+    },
+    {
+      "name": "TG: URA.RU",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/ura_ru"
+    },
+    {
+      "name": "TG: Mash",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/breakingmash"
+    },
+    {
+      "name": "TG: 360tv",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/shot_shot"
+    },
+    {
+      "name": "TG: Губернатор Вологодской обл.",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/filimonov_35"
+    },
+    {
+      "name": "TG: Правительство Вологодской обл.",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/gov35"
+    },
+    {
+      "name": "TG: Вологда новости",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/newsvo35"
+    },
+    {
+      "name": "TG: Вологда сегодня",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/vologda_today"
+    },
+    {
+      "name": "TG: Северо-Запад. Голос",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/szfo_golos"
+    },
+    {
+      "name": "TG: Новый Калининград",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/newkaliningrad"
+    },
+    {
+      "name": "TG: Клопс.ру",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/klops_ru"
+    },
+    {
+      "name": "TG: Правительство Калининградской обл.",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/gov39"
+    },
+    {
+      "name": "TG: Калининград Live",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/kaliningradlive"
+    },
+    {
+      "name": "TG: Матч ТВ",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/matchtv_official"
+    },
+    {
+      "name": "TG: Минспорт России",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/minsportru"
+    },
+    {
+      "name": "TG: Россия-Китай",
+      "type": "rss",
+      "enabled": true,
+      "url": "http://rsshub:1200/telegram/channel/russia_china_news"
+    },
+    {
+      "name": "Mail.ru Новости",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://news.mail.ru/rss/90/"
+    },
+    {
+      "name": "Mail.ru Политика",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://news.mail.ru/rss/92/"
+    },
+    {
+      "name": "Mail.ru Общество",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://news.mail.ru/rss/91/"
+    },
+    {
+      "name": "Mail.ru Спорт",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://news.mail.ru/rss/94/"
+    },
+    {
+      "name": "Mail.ru Регионы",
+      "type": "rss",
+      "enabled": true,
+      "url": "https://news.mail.ru/rss/95/"
+    },
+    {
+      "name": "Одноклассники (OK.ru)",
+      "type": "ok_search",
+      "enabled": true,
+      "mode": "web_index",
+      "site": "ok.ru",
+      "app_id": "512004968849"
+    }
+  ],
+  "schedule": {
+    "enabled": false,
+    "interval_minutes": 30
+  },
+  "_projects_in_db": true
+}
