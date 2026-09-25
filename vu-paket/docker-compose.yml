@@ -1,0 +1,11 @@
+# Отдельный сервис; на сервере с PR Monitor достаточно добавить блок в общий Caddyfile:
+#   vu-paket.example.ru { encode gzip  reverse_proxy vu-paket:8080 }
+services:
+  vu-paket:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "127.0.0.1:8080:8080"
