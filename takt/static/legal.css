@@ -1,0 +1,7 @@
+@import url("/static/styles.css");
+.doc{max-width:780px;margin:0 auto;padding:32px 16px 64px}
+.doc h1{font-size:clamp(28px,5vw,40px);margin:8px 0 8px}
+.doc h2{font-size:20px;margin:28px 0 8px}
+.doc p,.doc li{color:var(--ink-2)}
+.doc .muted{color:var(--muted);font-size:14px}
+.doc .back{display:inline-block;margin-bottom:12px;font-weight:600}

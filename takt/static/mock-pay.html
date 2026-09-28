@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Тестовая оплата</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body><main class="wrap" style="max-width:460px;padding-top:48px">
+<div class="tool">
+  <span class="badge b-check">Тестовый режим</span>
+  <h2 style="margin-top:12px">Оплата {{AMOUNT}} ₽</h2>
+  <p class="res-sub">Это имитация платёжной страницы. Деньги не списываются. На боевом сервере включите PAYMENT_PROVIDER=yookassa.</p>
+  <form method="post" action="/mock-pay/{{ORDER}}">
+    <input type="hidden" name="token" value="{{TOKEN}}">
+    <button class="btn btn-primary btn-lg btn-block" name="action" value="pay" id="mockpay">Оплатить (тест)</button>
+    <button class="btn btn-ghost btn-block" style="margin-top:10px" name="action" value="cancel" id="mockcancel">Отменить</button>
+  </form>
+</div></main></body></html>

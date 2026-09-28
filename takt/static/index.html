@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{BRAND}} — музыка для выступления ровно нужной длины</title>
+<meta name="description" content="Сократим или удлиним музыку для художественной гимнастики, фигурного катания, танца, выпускного или свадьбы до точной длительности. Склейки по тактам, финал как в оригинале. 3 варианта за пару минут, слушайте бесплатно.">
+<meta name="theme-color" content="#6d28d9">
+<link rel="canonical" href="{{BASE_URL}}/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{BRAND}} — музыка ровно нужной длины за 3 минуты">
+<meta property="og:description" content="Загрузите трек, укажите время (например, 1:30) — получите 3 варианта без слышимых склеек. Прослушивание бесплатно.">
+<meta property="og:url" content="{{BASE_URL}}/">
+<meta property="og:image" content="{{BASE_URL}}/static/og.png">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/static/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/styles.css?v=2">
+<script>window.TAKT=/*CONFIG*/{};</script>
+<!--METRIKA-->
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="{{BRAND}} — на главную">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#6d28d9"/><path d="M8 25c4 0 5-10 9-10s4 12 8 12 5-9 8-9" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/><path d="M30 8v24" stroke="#f9a8d4" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>{{BRAND}}</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#how">Как работает</a><a href="#demo">Пример</a><a href="#price">Цены</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#tool" data-go-tool>Загрузить трек</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Гимнастика · фигурное катание · танцы · выпускной</span>
+      <h1>Музыка для выступления — <span class="hl">ровно нужной длины</span></h1>
+      <p class="lead">Загрузите трек и укажите время, например 1:30. Через пару минут — 3 варианта: склейки по тактам, финал как в оригинале, длительность до десятой секунды.</p>
+      <ul class="ticks">
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e7f6ee"/><path d="m7 12.5 3.2 3L17 9" fill="none" stroke="#0e8a52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Режем по сильным долям — склейку не слышно</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e7f6ee"/><path d="m7 12.5 3.2 3L17 9" fill="none" stroke="#0e8a52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Сохраняем настоящий финал — упражнение закончится вместе с музыкой</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#e7f6ee"/><path d="m7 12.5 3.2 3L17 9" fill="none" stroke="#0e8a52" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Слушаете бесплатно, платите {{PRICE_SINGLE}} ₽ только за понравившийся вариант</li>
+      </ul>
+      <p class="hero-note">Звукорежиссёр берёт 600–2 500 ₽ и 1–3 дня. Здесь — несколько минут.</p>
+    </div>
+
+    <div class="tool" id="tool" aria-live="polite">
+      <!-- Шаг 1: форма -->
+      <form id="form" novalidate>
+        <h2>Сделаем трек нужной длины</h2>
+        <label class="drop" id="drop" tabindex="0">
+          <input type="file" id="file" class="sr" accept="audio/*,video/*,.mp3,.m4a,.wav,.ogg,.flac,.aac,.opus,.mp4,.mov">
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6.5 9.5 12 4l5.5 5.5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></span>
+          <b>Выберите или перетащите трек</b>
+          <small>MP3, M4A, WAV, OGG, FLAC или видео — возьмём звук. До <span data-max-mb>25</span> МБ</small>
+        </label>
+        <div class="drop has" id="picked" hidden>
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span>
+          <div class="grow"><div class="fname" id="fname"></div><div class="meta" id="fmeta"></div></div>
+          <button type="button" class="link" id="change">Заменить</button>
+        </div>
+
+        <div class="field">
+          <div class="label"><span>Нужная длительность</span><small>мин:сек</small></div>
+          <div class="dur">
+            <div class="stepper">
+              <button type="button" data-step="-1" aria-label="Минус секунда">−</button>
+              <input id="target" inputmode="decimal" autocomplete="off" value="1:30" aria-label="Длительность, минуты:секунды">
+              <button type="button" data-step="1" aria-label="Плюс секунда">+</button>
+            </div>
+          </div>
+          <div class="chips" id="presets">
+            <button type="button" class="chip" data-t="1:15" aria-pressed="false">1:15</button>
+            <button type="button" class="chip" data-t="1:30" aria-pressed="true">1:30 <small>ХГ индивид.</small></button>
+            <button type="button" class="chip" data-t="2:00" aria-pressed="false">2:00</button>
+            <button type="button" class="chip" data-t="2:30" aria-pressed="false">2:30 <small>ХГ группа</small></button>
+            <button type="button" class="chip" data-t="3:00" aria-pressed="false">3:00</button>
+          </div>
+          <div class="hint" id="durhint">Точное время берите из положения о соревнованиях или у тренера.</div>
+        </div>
+
+        <details class="more" id="more">
+          <summary>Дополнительно</summary>
+          <div class="opt-row">
+            <div>
+              <div class="label"><span>Финал</span></div>
+              <div class="seg" role="group" aria-label="Финал">
+                <button type="button" data-ending="natural" aria-pressed="true">Как в оригинале</button>
+                <button type="button" data-ending="fade" aria-pressed="false">Затухание</button>
+              </div>
+            </div>
+            <label class="switch"><input type="checkbox" id="signal"><span>Сигнал перед музыкой<small>Короткий «пик» за 2 секунды до начала. В длительность не входит.</small></span></label>
+            <div>
+              <div class="label"><span>Темп всего трека</span><small id="tempoval">без изменений</small></div>
+              <input type="range" id="tempo" min="-10" max="10" step="1" value="0" aria-label="Изменение темпа, проценты">
+            </div>
+          </div>
+        </details>
+
+        <div class="err" id="formerr" hidden></div>
+        <button class="btn btn-primary btn-lg btn-block submit" id="go" type="submit">Сделать 3 варианта</button>
+        <p class="fine">Бесплатно до оплаты. Нажимая кнопку, вы соглашаетесь с <a href="/offer" target="_blank">офертой</a> и <a href="/privacy" target="_blank">политикой данных</a>.</p>
+      </form>
+
+      <!-- Шаг 2: загрузка и обработка -->
+      <div id="busy" hidden>
+        <h2 id="busytitle">Загружаем трек…</h2>
+        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+        <ul class="steps" id="steps">
+          <li data-s="upload"><span class="dot"></span>Загрузка файла</li>
+          <li data-s="beats"><span class="dot"></span>Ищем такты и сильные доли</li>
+          <li data-s="plan"><span class="dot"></span>Подбираем места склеек</li>
+          <li data-s="render"><span class="dot"></span>Собираем 3 варианта</li>
+        </ul>
+        <div class="wait-note" id="waitnote">Обычно это занимает 1–2 минуты. Страницу можно не обновлять — результат появится сам.</div>
+      </div>
+
+      <!-- Шаг 3: результаты -->
+      <div id="results" hidden>
+        <div class="res-head">
+          <h2 id="restitle">Готово: 3 варианта</h2>
+          <button class="link" id="restart" type="button">Другой трек</button>
+        </div>
+        <p class="res-sub" id="ressub"></p>
+        <div id="variants"></div>
+      </div>
+
+      <!-- Ошибка обработки -->
+      <div id="failed" hidden>
+        <h2>Не получилось обработать трек</h2>
+        <div class="err" id="failmsg"></div>
+        <button class="btn btn-primary btn-block submit" id="retry" type="button">Попробовать другой файл</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="how">
+  <div class="wrap">
+    <h2>Как это работает</h2>
+    <p class="sub">Никаких программ и навыков монтажа. Алгоритм находит в треке такты и повторяющиеся фрагменты и вырезает лишнее так, чтобы переход звучал естественно.</p>
+    <div class="cards c3">
+      <div class="card"><div class="num">1</div><h3>Загрузите трек</h3><p>Файл с телефона или компьютера. Подойдёт и видео — звук возьмём из него.</p></div>
+      <div class="card"><div class="num">2</div><h3>Укажите время</h3><p>Например, 1:30. Можно и удлинить: повторим подходящий фрагмент.</p></div>
+      <div class="card"><div class="num">3</div><h3>Выберите вариант</h3><p>Послушайте три варианта и места склеек. Платите только за тот, который нравится, — и скачивайте MP3 или WAV.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="demo">
+  <div class="wrap">
+    <h2>Пример: 2:30 → 1:30</h2>
+    <p class="sub">Вальс сокращён автоматически, без ручной правки. Нажмите «Послушать склейку» — попробуйте услышать, где был разрез.</p>
+    <div class="demo">
+      <div class="card"><div class="tag">Было</div><div class="dur-big" data-demo-dur="before">2:30</div>
+        <div class="v-player"><button class="play" data-demo="before" aria-label="Слушать оригинал"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><div class="wave" data-demo-wave="before"><canvas></canvas></div></div>
+      </div>
+      <div class="card"><div class="tag">Стало</div><div class="dur-big">1:30,0</div>
+        <div class="v-player"><button class="play" data-demo="after" aria-label="Слушать результат"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button><div class="wave" data-demo-wave="after"><canvas></canvas></div></div>
+        <div class="v-info"><button class="seamlink" data-demo-seam>Послушать склейку</button></div>
+      </div>
+    </div>
+    <p class="credit" id="democredit"></p>
+  </div>
+</section>
+
+<section class="block" id="who">
+  <div class="wrap">
+    <h2>Для кого</h2>
+    <p class="sub">Для всех, кому к выступлению нужна музыка определённой длины, а монтировать некогда или не хочется.</p>
+    <div class="cards c5">
+      <div class="card"><div class="emoji">🎀</div><h3>Художественная гимнастика</h3><p>Индивидуальные и групповые упражнения. Сигнал перед музыкой — одной галочкой.</p></div>
+      <div class="card"><div class="emoji">⛸️</div><h3>Фигурное катание</h3><p>Короткая и произвольная программы под нужное время.</p></div>
+      <div class="card"><div class="emoji">💃</div><h3>Танцы и концерты</h3><p>Номер для конкурса, отчётного концерта, утренника.</p></div>
+      <div class="card"><div class="emoji">🎓</div><h3>Выпускной вальс</h3><p>Сократим до 2–2,5 минут, чтобы танец не затянулся.</p></div>
+      <div class="card"><div class="emoji">💍</div><h3>Первый танец</h3><p>Короткий танец смотрится увереннее. Финал останется красивым.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="compare">
+  <div class="wrap">
+    <h2>Почему не самому и не звукорежиссёру</h2>
+    <p class="sub">Сравнили способы подготовить музыку к выступлению.</p>
+    <div class="cards c3 cmp">
+      <div class="card"><h3>Звукорежиссёр</h3><dl>
+        <dt>Цена</dt><dd>600–2 500 ₽ и выше</dd><dt>Время</dt><dd>От пары часов до 3 дней</dd>
+        <dt>Что нужно от вас</dt><dd>Найти, объяснить задачу, ждать</dd><dt>Варианты</dt><dd>Обычно один, правки — по переписке</dd></dl></div>
+      <div class="card"><h3>Самому в редакторе</h3><dl>
+        <dt>Цена</dt><dd>Бесплатно</dd><dt>Время</dt><dd>30–120 минут</dd>
+        <dt>Что нужно от вас</dt><dd>Найти такты, свести стык, подогнать секунды</dd><dt>Варианты</dt><dd>Сколько хватит терпения</dd></dl></div>
+      <div class="card us"><h3>{{BRAND}}</h3><dl>
+        <dt>Цена</dt><dd>{{PRICE_SINGLE}} ₽, прослушивание бесплатно</dd><dt>Время</dt><dd>1–2 минуты</dd>
+        <dt>Что нужно от вас</dt><dd>Загрузить файл и указать время</dd><dt>Варианты</dt><dd>Сразу три, пересборка бесплатно</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="price">
+  <div class="wrap">
+    <h2>Цены</h2>
+    <p class="sub">Без подписок и автопродлений. Прослушивание всех вариантов — бесплатно.</p>
+    <div class="price">
+      <div class="card"><div class="tag">Прослушать</div><div class="amt">0 ₽</div><ul><li>3 варианта с отметками склеек</li><li>Превью с тихим водяным знаком</li></ul></div>
+      <div class="card best"><div class="tag">Один трек</div><div class="amt">{{PRICE_SINGLE}} <small>₽</small></div><ul><li>Выбранный вариант: MP3 320 кбит/с и WAV</li><li>До <span data-rebuilds>3</span> бесплатных пересборок этого трека на другую длительность</li></ul></div>
+      <div class="card"><div class="tag">Пакет</div><div class="amt">{{PRICE_PACK}} <small>₽ / {{PACK_SIZE}} треков</small></div><ul><li>Для тренеров и нескольких предметов</li><li>Код на {{PACK_SIZE}} треков, без срока</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq" id="faq">
+  <div class="wrap">
+    <h2>Вопросы</h2>
+    <details><summary>Будет ли слышно склейку?</summary><p>Алгоритм режет только по сильным долям и ищет места, где музыка повторяется, поэтому в большинстве треков переход не слышен. Рядом с каждым вариантом есть кнопка «Послушать склейку» — проверьте до оплаты. Если стык всё же заметен, выберите другой вариант или пересоберите трек на другую длительность.</p></details>
+    <details><summary>Насколько точная длительность?</summary><p>До десятой доли секунды. Чтобы попасть точно, мы можем чуть изменить темп — обычно меньше чем на 1–2 %, на слух это незаметно. Сколько именно, показано у каждого варианта.</p></details>
+    <details><summary>Где взять файл с музыкой?</summary><p>Подойдёт файл, который прислал тренер, скачанный MP3 или даже видео с телефона — звук возьмём из него. Треки из стриминговых приложений (VK Музыка, Яндекс Музыка) обычно не скачать как файл.</p></details>
+    <details><summary>А если трек короче, чем нужно?</summary><p>Удлиним: повторим подходящий фрагмент так же незаметно. Максимум — в 3 раза длиннее оригинала.</p></details>
+    <details><summary>Что с классической музыкой и свободным темпом?</summary><p>Работает, но если в музыке нет ровного ритма, склейки сложнее. Такие треки мы помечаем — послушайте места стыков внимательнее.</p></details>
+    <details><summary>Что такое сигнал перед музыкой?</summary><p>Короткий звуковой сигнал («пик») за 2 секунды до начала музыки — его часто просят для соревнований. В указанную длительность он не входит.</p></details>
+    <details><summary>Как оплатить и что я получу?</summary><p>Картой или через СБП. Сразу после оплаты на странице появятся ссылки на MP3 (320 кбит/с) и WAV, а если укажете e-mail — пришлём их и на почту. Файлы хранятся <span data-retention>7</span> дней.</p></details>
+    <details><summary>Что с авторскими правами?</summary><p>Мы обрабатываем файл, который вы загрузили, для вашего личного использования (тренировки, выступления). Мы не распространяем музыку и удаляем файлы через <span data-retention>7</span> дней. Права на музыку остаются у правообладателей.</p></details>
+    <details><summary>Не понравился результат — вернёте деньги?</summary><p>Вы слушаете все варианты до оплаты, поэтому платите за то, что уже слышали. Если после оплаты файл не скачивается или звучит иначе, чем в превью, напишите нам — вернём деньги.</p></details>
+    <details id="restorebox"><summary>Потерял ссылку на купленный трек</summary><div class="restore"><p>Введите e-mail, который указывали при оплате, — пришлём ссылки ещё раз.</p>
+      <form class="codebox" id="restoreform"><input type="email" id="restoreemail" placeholder="you@example.ru" required aria-label="E-mail"><button class="btn btn-ghost" type="submit">Отправить</button></form>
+      <div id="restoremsg" class="okmsg" hidden></div></div></details>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Старт скоро? Музыка будет готова через пару минут</h2>
+      <p>Загрузите трек — первые три варианта бесплатно послушать.</p>
+      <a class="btn btn-lg" href="#tool" data-go-tool>Загрузить трек</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>© {{BRAND}}. Музыка для выступлений нужной длины.</div>
+    <div><a href="/offer">Оферта</a> · <a href="/privacy">Политика обработки данных</a> · <span id="contacts"></span></div>
+  </div>
+</footer>
+
+<template id="tpl-variant">
+  <div class="variant fade-in">
+    <div class="v-top"><span class="v-name"></span><span class="badge"></span></div>
+    <div class="v-player">
+      <button class="play" type="button" aria-label="Слушать"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+      <div class="wave"><canvas></canvas></div>
+      <div class="v-time">0:00 / 0:00</div>
+    </div>
+    <div class="v-info"></div>
+    <div class="v-actions"></div>
+    <div class="v-extra"></div>
+  </div>
+</template>
+
+<script src="/static/app.js?v=2" defer></script>
+</body>
+</html>

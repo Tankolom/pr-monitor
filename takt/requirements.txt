@@ -1,0 +1,12 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+httpx>=0.27
+numpy>=1.26
+scipy>=1.11
+soundfile>=0.12
+librosa>=0.10.2
+soxr>=0.4
+pyloudnorm>=0.1.1
+# нейросеть поиска долей и тактов (Beat This!, ISMIR 2024). torch ставится отдельно в Dockerfile (CPU-сборка)
+beat_this @ git+https://github.com/CPJKU/beat_this.git@b95c8ab0c58c2d9fcfd40508ae8dffbc05ac4f5c
