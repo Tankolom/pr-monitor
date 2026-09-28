@@ -82,6 +82,7 @@ CREATE TABLE IF NOT EXISTS events (
     props TEXT
 );
 CREATE INDEX IF NOT EXISTS events_ts ON events(ts, name);
+CREATE INDEX IF NOT EXISTS events_ip ON events(ip, ts);
 
 CREATE TABLE IF NOT EXISTS feedback (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -109,26 +109,23 @@ def unlock(job_id: str, variant: int, source: str) -> str:
     return token
 
 
-def root_order_for(job) -> str | None:
-    """Заказ, оплативший этот трек (для пересборки)."""
+def root_key_for(job) -> str | None:
+    """Ключ бесплатных пересборок: «job:<исходное оплаченное задание>». None — трек не оплачен."""
     if job["entitlement"]:
         return job["entitlement"]
-    row = db.one("SELECT id FROM orders WHERE job_id=? AND status='paid' ORDER BY paid_at LIMIT 1", job["id"])
-    if row:
-        return row["id"]
-    row = db.one("SELECT source FROM unlocks WHERE job_id=? ORDER BY created_at LIMIT 1", job["id"])
-    if row and row["source"].startswith("pack:"):
-        return row["source"]
+    if db.one("SELECT 1 FROM unlocks WHERE job_id=? LIMIT 1", job["id"]):
+        return f"job:{job['id']}"
     return None
 
 
 def rebuilds_left(job) -> int:
-    root = root_order_for(job)
-    if not root:
+    root = root_key_for(job)
+    if not root or not root.startswith("job:"):
         return 0
+    root_job = root[4:]
     used = db.one("SELECT COUNT(*) c FROM jobs WHERE entitlement=?", root)["c"]
-    first = db.one("SELECT MIN(created_at) m FROM unlocks WHERE source IN (?, ?)", f"order:{root}", root)["m"]
-    if first and time.time() - first > config.settings.retention_days * 86400:
+    first = db.one("SELECT MIN(created_at) m FROM unlocks WHERE job_id=?", root_job)["m"]
+    if not first or time.time() - first > config.settings.retention_days * 86400:
         return 0
     return max(config.settings.rebuilds_per_order - int(used), 0)
 

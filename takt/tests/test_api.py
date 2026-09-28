@@ -266,3 +266,17 @@ def test_customers_get_higher_limits(client, song_path, monkeypatch):
     config.reload()
     # у покупателя лимит ×8: вторая загрузка за час проходит
     assert upload(client, song_path, "0:50").status_code == 200
+
+
+def test_rebuilds_are_per_track_for_pack(client, song_path):
+    job, st = done_job(client, song_path, "0:45")
+    r = client.post(f"/api/jobs/{job['id']}/checkout", json={"token": job["token"], "variant": 0, "product": "pack"}).json()
+    mock_pay(client, r["order_id"], r["order_token"])
+    code = client.get(f"/api/orders/{r['order_id']}", params={"token": r["order_token"]}).json()["pack_code"]
+    job2, _ = done_job(client, song_path, "0:40")
+    client.post(f"/api/jobs/{job2['id']}/redeem", json={"token": job2["token"], "variant": 0, "code": code})
+    # пересборка первого трека не расходует пересборки второго
+    assert client.post(f"/api/jobs/{job['id']}/rebuild", json={"token": job["token"], "target": "0:50"}).status_code == 200
+    st1 = client.get(f"/api/jobs/{job['id']}", params={"token": job["token"]}).json()
+    st2 = client.get(f"/api/jobs/{job2['id']}", params={"token": job2["token"]}).json()
+    assert st1["rebuilds_left"] == 2 and st2["rebuilds_left"] == 3

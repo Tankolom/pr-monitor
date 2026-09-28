@@ -95,6 +95,7 @@ docker compose logs -f web worker     # выход: Ctrl+C
 
 | Симптом | Что сделать |
 |---|---|
+| `docker compose up` не может скачать образ (`429`, `403`, `TLS handshake timeout`) | Docker Hub бывает недоступен с российских IP: раскомментируйте в `.env` строки `BASE_IMAGE` и `CADDY_IMAGE` (зеркало Google) и повторите; у многих российских хостингов есть и собственное зеркало Docker Hub — см. их документацию |
 | Сайт не открывается по HTTPS | Проверьте A-записи домена и что порты 80/443 открыты; `docker compose logs caddy` |
 | Треки долго в очереди | `docker compose logs worker`; добавьте обработчик `--scale worker=2` |
 | Оплата не проходит | `docker compose logs web | grep -i yookassa`; проверьте ключи и режим (тестовый/боевой) |

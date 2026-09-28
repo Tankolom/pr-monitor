@@ -24,7 +24,7 @@ def probe(path: str) -> dict:
         ).stdout
         info = json.loads(out)
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired, json.JSONDecodeError):
-        raise AudioError("Не получилось прочитать файл. Загрузите MP3, M4A, WAV, OGG или FLAC.")
+        raise AudioError("Не получилось прочитать файл. Загрузите MP3, M4A, WAV, OGG или FLAC.") from None
     streams = [s for s in info.get("streams", []) if s.get("codec_type") == "audio"]
     if not streams:
         raise AudioError("В файле нет звуковой дорожки.")
@@ -43,7 +43,7 @@ def decode(path: str, sr: int = SR) -> np.ndarray:
             capture_output=True, check=True, timeout=180,
         ).stdout
     except (subprocess.CalledProcessError, subprocess.TimeoutExpired):
-        raise AudioError("Не получилось декодировать файл. Попробуйте другой формат (MP3 или WAV).")
+        raise AudioError("Не получилось декодировать файл. Попробуйте другой формат (MP3 или WAV).") from None
     y = np.frombuffer(raw, dtype=np.float32).reshape(-1, 2).copy()
     if len(y) < sr * 5:
         raise AudioError("Файл слишком короткий: нужно хотя бы 5 секунд музыки.")

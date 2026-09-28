@@ -36,8 +36,8 @@ def main() -> None:
         for width, name in ((1280, "desktop"), (390, "mobile")):
             ctx = b.new_context(viewport={"width": width, "height": 900}, accept_downloads=True)
             page = ctx.new_page()
-            page.on("pageerror", lambda e: errors.append(f"{name}: {e}"))
-            page.on("console", lambda m: errors.append(f"{name} console: {m.text}") if m.type == "error" and "404" not in m.text else None)
+            page.on("pageerror", lambda e, name=name: errors.append(f"{name}: {e}"))
+            page.on("console", lambda m, name=name: errors.append(f"{name} console: {m.text}") if m.type == "error" and "404" not in m.text else None)
             page.goto(BASE + "/", wait_until="load")
             # ошибка без файла
             page.click("#go")

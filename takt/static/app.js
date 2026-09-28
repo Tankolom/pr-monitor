@@ -701,6 +701,12 @@
     } catch (e) { $("#demo").hidden = true; }
   })();
 
+  // ---------- тестовый режим оплаты: видно сразу, чтобы не забыть переключить ----------
+  if (CFG.mockPayments) {
+    document.body.prepend(el("div", { style: "background:#a35207;color:#fff;text-align:center;font:600 13px/1.4 Manrope,sans-serif;padding:6px 12px",
+      text: "Тестовый режим оплаты: деньги не списываются. Для запуска включите PAYMENT_PROVIDER=yookassa." }));
+  }
+
   // ---------- старт ----------
   track("landing_view", { ref: document.referrer ? new URL(document.referrer).hostname : "" });
   syncChips();

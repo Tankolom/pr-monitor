@@ -1,6 +1,10 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-python:3.11-slim}
+    image: takt:latest
     env_file: .env
     volumes:
       - data:/data
@@ -9,9 +13,15 @@ services:
       - "8000"
 
   worker:
-    build: .
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-python:3.11-slim}
+    image: takt:latest
     env_file: .env
     command: ["python", "-m", "app.worker"]
+    depends_on:
+      - web
     volumes:
       - data:/data
     restart: unless-stopped
@@ -24,7 +34,7 @@ services:
           memory: 3g
 
   caddy:
-    image: caddy:2
+    image: ${CADDY_IMAGE:-caddy:2}
     ports:
       - "80:80"
       - "443:443"

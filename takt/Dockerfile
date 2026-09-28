@@ -1,4 +1,7 @@
-FROM python:3.11-slim
+# Если Docker Hub недоступен с сервера, соберите с зеркалом:
+#   docker compose build --build-arg BASE_IMAGE=mirror.gcr.io/library/python:3.11-slim
+ARG BASE_IMAGE=python:3.11-slim
+FROM ${BASE_IMAGE}
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 \
     DATA_DIR=/data TORCH_HOME=/models OMP_NUM_THREADS=2

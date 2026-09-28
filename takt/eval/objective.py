@@ -58,8 +58,6 @@ def check_variant(path: str, seams: list[float], signal_lead: float = 0.0) -> di
     model = _beat_model()
     beats, _ = model(mono, SR)
     beats = np.asarray(beats)
-    ibi = np.diff(beats)
-    med = np.median(ibi) if len(ibi) else 0.5
     mel = librosa.power_to_db(librosa.feature.melspectrogram(y=mono, sr=SR, hop_length=HOP, n_mels=64))
     mel = (mel - mel.mean(1, keepdims=True)) / (mel.std(1, keepdims=True) + 1e-6)
     chroma = librosa.feature.chroma_stft(y=mono, sr=SR, hop_length=HOP, n_fft=4096)

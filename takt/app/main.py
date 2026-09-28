@@ -7,7 +7,9 @@ import json
 import logging
 import os
 import re
+import secrets
 import time
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, File, Form, Header, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse, Response
@@ -31,7 +33,16 @@ YOOKASSA_NETS = [ipaddress.ip_network(n) for n in (
     "185.71.76.0/27", "185.71.77.0/27", "77.75.153.0/25", "77.75.156.11/32", "77.75.156.35/32",
     "77.75.154.128/25", "2a02:5180::/32")]
 
-app = FastAPI(title="Такт", docs_url=None, redoc_url=None, openapi_url=None)
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    os.makedirs(config.settings.jobs_dir, exist_ok=True)
+    db.connect()
+    if config.settings.payment_provider == "mock" and not config.settings.base_url.startswith("http://localhost"):
+        log.warning("PAYMENT_PROVIDER=mock на боевом адресе — оплата не настоящая!")
+    yield
+
+
+app = FastAPI(title="Такт", docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=STATIC), name="static")
 
 
@@ -69,7 +80,7 @@ def parse_time(value: str) -> float:
     try:
         return float(value)
     except ValueError:
-        raise HTTPException(400, "Не понял длительность. Пример: 1:30")
+        raise HTTPException(400, "Не понял длительность. Пример: 1:30") from None
 
 
 # ---------- страницы ----------
@@ -201,7 +212,7 @@ async def create_job(request: Request, file: UploadFile = File(...), target: str
     except aio.AudioError as e:
         os.remove(path)
         db.event("upload_rejected", None, device, ip, reason="probe")
-        raise HTTPException(400, str(e))
+        raise HTTPException(400, str(e)) from None
     if info["duration"] and info["duration"] > 12 * 60:
         os.remove(path)
         raise HTTPException(400, "Трек длиннее 12 минут. Загрузите фрагмент покороче.")
@@ -243,7 +254,7 @@ async def checkout(job_id: str, request: Request):
         order = services.create_order(job, variant, product, email)
     except PaymentError as e:
         log.error("payment create failed: %s", e)
-        raise HTTPException(502, "Платёжный сервис не ответил. Попробуйте ещё раз через минуту.")
+        raise HTTPException(502, "Платёжный сервис не ответил. Попробуйте ещё раз через минуту.") from None
     db.event("checkout_start", job["id"], order_id=order["id"], product=product, amount=order["amount"])
     return {"order_id": order["id"], "order_token": order["token"], "confirmation_url": order["confirmation_url"]}
 
@@ -274,7 +285,7 @@ async def redeem(job_id: str, request: Request):
     try:
         services.redeem(job, variant, str(body.get("code") or ""))
     except ValueError as e:
-        raise HTTPException(400, str(e))
+        raise HTTPException(400, str(e)) from None
     return {"ok": True, "remaining": services.pack_remaining(str(body.get("code")))}
 
 
@@ -286,7 +297,7 @@ async def claim(job_id: str, request: Request):
     try:
         services.claim_rebuild(job, variant)
     except ValueError as e:
-        raise HTTPException(400, str(e))
+        raise HTTPException(400, str(e)) from None
     db.event("rebuild_claim", job["id"], variant=variant)
     return {"ok": True}
 
@@ -307,7 +318,7 @@ async def rebuild(job_id: str, request: Request):
         opts["ending"] = "fade" if body["ending"] == "fade" else "natural"
     if "signal" in body:
         opts["signal"] = bool(body["signal"])
-    root = services.root_order_for(job)
+    root = services.root_key_for(job)
     new = services.create_job(source_path=job["source_path"], filename=job["filename"], target=t, options=opts,
                               ip=client_ip(request), device=job["device"], parent_id=job["id"], entitlement=root)
     return {"id": new["id"], "token": new["token"]}
@@ -331,14 +342,18 @@ async def events(request: Request, x_device: str | None = Header(None)):
     try:
         body = await request.json()
     except Exception:
-        raise HTTPException(400, "bad json")
+        raise HTTPException(400, "bad json") from None
     name = body.get("name")
+    ip = client_ip(request)
+    recent = db.one("SELECT COUNT(*) c FROM events WHERE ts > ? AND ip = ?", time.time() - 600, ip)["c"]
+    if recent > 300:
+        raise HTTPException(429, "too many events")
     if name not in CLIENT_EVENTS:
         raise HTTPException(400, "unknown event")
     props = body.get("props") if isinstance(body.get("props"), dict) else {}
     props = {str(k)[:32]: (v if isinstance(v, (int, float, bool)) else str(v)[:200]) for k, v in list(props.items())[:12]}
     db.event(name, (body.get("job_id") or None) and str(body["job_id"])[:20], (x_device or "")[:64] or None,
-             client_ip(request), **props)
+             ip, **props)
     return {"ok": True}
 
 
@@ -377,7 +392,7 @@ def _variant(job, value) -> int:
     try:
         v = int(value)
     except (TypeError, ValueError):
-        raise HTTPException(400, "Выберите вариант.")
+        raise HTTPException(400, "Выберите вариант.") from None
     meta = json.loads(job["meta"] or "{}")
     if v not in {x["index"] for x in meta.get("variants", [])}:
         raise HTTPException(400, "Нет такого варианта.")
@@ -469,16 +484,6 @@ def admin(token: str = "", days: int = 7):
     from .admin import render_admin
 
     s = config.settings
-    if not s.admin_token or not token or token != s.admin_token:
+    if not s.admin_token or not token or not secrets.compare_digest(token, s.admin_token):
         raise HTTPException(404)
     return HTMLResponse(render_admin(days, token))
-
-
-@app.on_event("startup")
-def _startup():
-    os.makedirs(config.settings.jobs_dir, exist_ok=True)
-    db.connect()
-    if config.settings.payment_provider == "mock" and not config.settings.base_url.startswith("http://localhost"):
-        log.warning("PAYMENT_PROVIDER=mock на боевом адресе — оплата не настоящая!")
-
-

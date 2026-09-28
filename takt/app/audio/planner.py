@@ -214,7 +214,8 @@ def _dp_shorten(an: Analysis, C: np.ndarray, target: float, max_jumps: int = 3, 
                 t, cc, k = int(pt[k, t, cc]), int(pc[k, t, cc]), int(prev)
         if k != 0:
             continue
-        seams.reverse(); costs.reverse()
+        seams.reverse()
+        costs.reverse()
         segs, cur = [], ms
         for i, j in seams:
             segs.append((cur, b[i]))
