@@ -63,6 +63,7 @@ python -m eval.blind ./eval_out ./blind_test     # страница слепог
 python -m eval.blind score ./blind_test/key.json results.csv
 ```
 
+Результаты проверки качества на 16 реальных треках — [eval/REPORT.md](eval/REPORT.md).
 Развёртывание и запуск продаж — в [DEPLOY.md](DEPLOY.md) и [LAUNCH.md](LAUNCH.md).
 
 ## Лицензии компонентов
