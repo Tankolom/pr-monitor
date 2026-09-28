@@ -32,6 +32,8 @@ class Settings:
     # чек 54-ФЗ через ЮKassa (нужно ИП/ООО с «Чеками от ЮKassa»); самозанятым оставить 0
     yookassa_receipt: bool = field(default_factory=lambda: _env("YOOKASSA_SEND_RECEIPT", "0") == "1")
     yookassa_vat_code: int = field(default_factory=lambda: _int("YOOKASSA_VAT_CODE", 1))
+    # код системы налогообложения в чеке (1 — ОСН, 2 — УСН доход, 3 — УСН доход−расход…); 0 — не передавать
+    yookassa_tax_system_code: int = field(default_factory=lambda: _int("YOOKASSA_TAX_SYSTEM_CODE", 0))
 
     smtp_host: str = field(default_factory=lambda: _env("SMTP_HOST"))
     smtp_port: int = field(default_factory=lambda: _int("SMTP_PORT", 465))
@@ -44,7 +46,10 @@ class Settings:
 
     seller_name: str = field(default_factory=lambda: _env("SELLER_NAME", "[ФИО или наименование продавца]"))
     seller_inn: str = field(default_factory=lambda: _env("SELLER_INN", "[ИНН]"))
-    seller_status: str = field(default_factory=lambda: _env("SELLER_STATUS", "самозанятый (плательщик НПД)"))
+    seller_status: str = field(default_factory=lambda: _env("SELLER_STATUS", "индивидуальный предприниматель"))
+    seller_ogrnip: str = field(default_factory=lambda: _env("SELLER_OGRNIP"))
+    seller_address: str = field(default_factory=lambda: _env("SELLER_ADDRESS"))
+    contact_phone: str = field(default_factory=lambda: _env("CONTACT_PHONE"))
     contact_email: str = field(default_factory=lambda: _env("CONTACT_EMAIL", "support@example.com"))
     contact_telegram: str = field(default_factory=lambda: _env("CONTACT_TELEGRAM"))
 

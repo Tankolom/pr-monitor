@@ -51,7 +51,10 @@ async def security_headers(request: Request, call_next):
     resp = await call_next(request)
     resp.headers.setdefault("X-Content-Type-Options", "nosniff")
     resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
-    resp.headers.setdefault("X-Frame-Options", "SAMEORIGIN")
+    # вебвизор Яндекс Метрики показывает запись сессии во фрейме — разрешаем только ему
+    resp.headers.setdefault("Content-Security-Policy",
+                            "frame-ancestors 'self' https://metrika.yandex.ru https://metrika.yandex.by "
+                            "https://metrica.yandex.com https://metrika.yandex.com.tr")
     if request.url.path.startswith("/api/"):
         resp.headers.setdefault("Cache-Control", "no-store")
     return resp
@@ -106,7 +109,8 @@ def _render_index() -> str:
     cfg = {"brand": s.brand, "priceSingle": s.price_single, "pricePack": s.price_pack, "packSize": s.pack_size,
            "minTarget": MIN_TARGET, "maxTarget": MAX_TARGET, "maxUploadMb": s.max_upload_mb,
            "retentionDays": s.retention_days, "rebuilds": s.rebuilds_per_order,
-           "contactEmail": s.contact_email, "contactTelegram": s.contact_telegram,
+           "contactEmail": s.contact_email, "contactTelegram": s.contact_telegram, "contactPhone": s.contact_phone,
+           "seller": {"name": s.seller_name, "inn": s.seller_inn, "ogrnip": s.seller_ogrnip},
            "mockPayments": s.payment_provider == "mock", "requireEmail": s.yookassa_receipt}
     return (page.replace("<!--METRIKA-->", metrika)
                 .replace("/*CONFIG*/{}", json.dumps(cfg, ensure_ascii=False))
@@ -125,6 +129,10 @@ def index():
 def _legal(name: str) -> HTMLResponse:
     s = config.settings
     page = _page(name)
+    ogrn = f", ОГРНИП {s.seller_ogrnip}" if s.seller_ogrnip else ""
+    extra = "".join(f"<br>{html.escape(x)}" for x in (s.seller_address and f"Адрес: {s.seller_address}",
+                                                        s.contact_phone and f"Телефон: {s.contact_phone}") if x)
+    page = page.replace("{{SELLER_OGRN_PART}}", html.escape(ogrn)).replace("{{SELLER_EXTRA}}", extra)
     for k, v in {"BRAND": s.brand, "SELLER_NAME": s.seller_name, "SELLER_INN": s.seller_inn,
                  "SELLER_STATUS": s.seller_status, "CONTACT_EMAIL": s.contact_email, "BASE_URL": s.base_url,
                  "PRICE_SINGLE": str(s.price_single), "PRICE_PACK": str(s.price_pack),

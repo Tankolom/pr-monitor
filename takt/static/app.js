@@ -122,6 +122,14 @@
   (() => {
     const c = $("#contacts");
     if (CFG.contactEmail) c.append(el("a", { href: `mailto:${CFG.contactEmail}`, text: CFG.contactEmail }));
+    if (CFG.contactPhone) {
+      if (c.childNodes.length) c.append(" · ");
+      c.append(el("a", { href: `tel:${CFG.contactPhone.replace(/[^+\d]/g, "")}`, text: CFG.contactPhone }));
+    }
+    if (CFG.seller && CFG.seller.name && !/^\[/.test(CFG.seller.name)) {
+      const req = [CFG.seller.name, CFG.seller.inn && `ИНН ${CFG.seller.inn}`, CFG.seller.ogrnip && `ОГРНИП ${CFG.seller.ogrnip}`].filter(Boolean).join(", ");
+      $("footer .wrap").append(el("div", { style: "flex-basis:100%;font-size:13px", text: req }));
+    }
     if (CFG.contactTelegram) {
       if (CFG.contactEmail) c.append(" · ");
       const tg = CFG.contactTelegram.replace(/^@/, "");

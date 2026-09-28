@@ -39,6 +39,7 @@ class YooKassa:
             if not order.get("email"):
                 raise PaymentError("Для чека нужен e-mail покупателя")
             body["receipt"] = {
+                **({"tax_system_code": s.yookassa_tax_system_code} if s.yookassa_tax_system_code else {}),
                 "customer": {"email": order["email"]},
                 "items": [{
                     "description": description[:128],
@@ -50,7 +51,7 @@ class YooKassa:
                 }],
             }
         # один и тот же заказ → один платёж даже при повторе запроса
-        r = self.client.post("/payments", json=body, headers={"Idempotence-Key": f"{order['id']}-{uuid.uuid5(uuid.NAMESPACE_URL, order['id'])}"})
+        r = self.client.post("/payments", json=body, headers={"Idempotence-Key": str(uuid.uuid5(uuid.NAMESPACE_URL, "takt-order-" + order["id"]))})
         if r.status_code >= 400:
             raise PaymentError(f"ЮKassa {r.status_code}: {r.text[:300]}")
         data = r.json()
