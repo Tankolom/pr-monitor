@@ -163,8 +163,10 @@ async def create_job(request: Request, file: UploadFile = File(...), target: str
     s = config.settings
     ip = client_ip(request)
     device = (x_device or "")[:64] or None
-    if services.jobs_today(ip, device, 3600) >= s.free_jobs_per_hour or \
-            services.jobs_today(ip, device, 86400) >= s.free_jobs_per_day:
+    per_hour, per_day = s.free_jobs_per_hour, s.free_jobs_per_day
+    if services.is_customer(ip, device):
+        per_hour, per_day = per_hour * 8, per_day * 15     # покупатели (тренеры с пакетами) работают пачками
+    if services.jobs_today(ip, device, 3600) >= per_hour or services.jobs_today(ip, device, 86400) >= per_day:
         db.event("rate_limited", None, device, ip)
         raise HTTPException(429, "Слишком много треков за короткое время. Попробуйте позже или напишите нам.")
     t = parse_time(target)

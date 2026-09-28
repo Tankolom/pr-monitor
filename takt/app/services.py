@@ -53,6 +53,14 @@ def jobs_today(ip: str | None, device: str | None, seconds: float) -> int:
     return int(row["c"])
 
 
+def is_customer(ip: str | None, device: str | None, days: int = 60) -> bool:
+    """Покупал ли этот посетитель (устройство или IP) за последние `days` дней — ему лимиты выше."""
+    row = db.one("""SELECT 1 FROM unlocks u JOIN jobs j ON j.id = u.job_id
+                    WHERE u.created_at > ? AND ((j.device IS NOT NULL AND j.device = ?) OR j.ip = ?) LIMIT 1""",
+                 time.time() - days * 86400, device, ip)
+    return row is not None
+
+
 def queue_position(job) -> int:
     row = db.one("SELECT COUNT(*) c FROM jobs WHERE status='queued' AND created_at < ?", job["created_at"])
     return int(row["c"])

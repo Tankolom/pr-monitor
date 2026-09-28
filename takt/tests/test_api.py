@@ -254,3 +254,15 @@ def test_parse_time():
     assert parse_time("1.30") == 90
     assert parse_time("90") == 90
     assert parse_time("2:15,5") == 135.5
+
+
+def test_customers_get_higher_limits(client, song_path, monkeypatch):
+    from app import config
+
+    job, st = done_job(client, song_path, "0:45")
+    r = client.post(f"/api/jobs/{job['id']}/checkout", json={"token": job["token"], "variant": 0}).json()
+    mock_pay(client, r["order_id"], r["order_token"])
+    monkeypatch.setenv("FREE_JOBS_PER_HOUR", "1")
+    config.reload()
+    # у покупателя лимит ×8: вторая загрузка за час проходит
+    assert upload(client, song_path, "0:50").status_code == 200
